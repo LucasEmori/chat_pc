@@ -1,0 +1,11 @@
+{
+  "kind": "critique-panel",
+  "score": 4,
+  "axes": {
+    "clarity":    { "score": 4, "notes": "Fluxo chat-first claro; welcome estado vazio, mensagens rotuladas, composer fixo. Sem modais." },
+    "hierarchy":  { "score": 4, "notes": "Headline serif = focal unico. Labels uppercase discretos. Tabelas com header sticky." },
+    "typography": { "score": 5, "notes": "Serif (Anthropic) so no welcome; sans no resto; mono para numeros/IDs/codigo. Escala DS respeitada." },
+    "motion":     { "score": 4, "notes": "Rise/fade em mensagens, spinner+steps, dots typing, rail de progresso. respeita prefers-reduced-motion." },
+    "brand":      { "score": 5, "notes": "Dark B&W puro (#0a0a0a/#ededed), laranja removido, acento=branco. Identidade AzimeAI mantida. DS Anthropic na estrutura/tokens." }
+  }
+}
