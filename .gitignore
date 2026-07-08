@@ -7,5 +7,5 @@ venv/
 .streamlit/
 *.egg-info/
 .pytest_cache/
-.graphify-out/
+graphify-out/
 .claude/
