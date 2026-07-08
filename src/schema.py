@@ -18,8 +18,8 @@ from pydantic import BaseModel, Field, field_validator
 
 # Vocabulários controlados para validação (mantidos em sync com mappings.py)
 CATEGORIAS_VALIDAS = {
-    "ANEL", "BRINCO", "COLAR", "PULSEIRA", "PINGENTE", "ARGOLA",
-    "CONJUNTO", "BROCHE", "CERTIFICADO",
+    "ANEL", "BRINCO", "COLAR", "CORRENTE", "PULSEIRA", "BRACELETE",
+    "PINGENTE", "ARGOLA", "CONJUNTO", "BROCHE", "CERTIFICADO",
 }
 BANHOS_VALIDOS = {"RÓDIO", "OURO", "OURO ROSÉ", "PRETO", "AMARELO"}
 TIPOS_PEDRA_VALIDOS = {"ZIRCONIA / FUSION", "MOISSANITE", "SEM PEDRA"}
@@ -35,8 +35,8 @@ class LinhaPedidoCompra(BaseModel):
     """
 
     categoria: str = Field(
-        description="Categoria do produto: ANEL, BRINCO, COLAR, PULSEIRA, "
-                    "PINGENTE, ARGOLA, CONJUNTO, BROCHE."
+        description="Categoria do produto: ANEL, BRINCO, COLAR, CORRENTE, "
+                    "PULSEIRA, BRACELETE, PINGENTE, ARGOLA, CONJUNTO, BROCHE."
     )
     codigo_fornecedor: str = Field(
         description="Referência do fornecedor, ex.: SE22101-W, SB08094-L. "
@@ -44,7 +44,8 @@ class LinhaPedidoCompra(BaseModel):
     )
     foto: str = Field("", description="URL/foto. Deixe vazio.")
     material: str = Field(
-        description="Material base: PRATA ou OURO. Default PRATA."
+        description="Material base definido pela MARCA: se marca=NV use "
+                    "SEMIJOIA; se marca=AL ou GR use PRATA. Default PRATA."
     )
     fornecedor: str = Field(
         description="Código interno do fornecedor no ERP (ex. 012432). "
@@ -64,7 +65,12 @@ class LinhaPedidoCompra(BaseModel):
     )
     tamanho: str = Field(
         "0",
-        description="Tamanho/medida se aplicável. Default '0'."
+        description="Tamanho/medida. Default '0'. Para ANEL copie EXATAMENTE "
+                    "o texto bruto da coluna de tamanho da invoice (ex.: "
+                    "'#5 - 40 #6 - 35 #7 - 45 #8 - 20 #9 - 10'); o sistema "
+                    "expande em linhas separadas por tamanho. Para "
+                    "CORRENTE/PULSEIRA/COLAR copie a medida (ex. "
+                    "'15,5CM+1CM+1CM') para o sistema somar."
     )
     tipo_pedra: str = Field(
         description="'ZIRCONIA / FUSION' para zirconia, 'MOISSANITE' para "

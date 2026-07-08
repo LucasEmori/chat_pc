@@ -1,0 +1,3752 @@
+{
+  "nodes": [
+    {
+      "id": "app",
+      "label": "app.py",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_load_logo",
+      "label": "_load_logo()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L53",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_esc",
+      "label": "_esc()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_label_row",
+      "label": "_label_row()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L79",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_msg_user",
+      "label": "_msg_user()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L87",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_msg_assistant",
+      "label": "_msg_assistant()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L96",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_msg_error",
+      "label": "_msg_error()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L105",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_msg_success",
+      "label": "_msg_success()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L112",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_msg_warning",
+      "label": "_msg_warning()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L121",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_msg_loading",
+      "label": "_msg_loading()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L126",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_file_chip_html",
+      "label": "_file_chip_html()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L136",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_df_preview",
+      "label": "_df_preview()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L147",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_py_dataframe",
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_normalizar_pc",
+      "label": "_normalizar_pc()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L170",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_steps_block_animated",
+      "label": "_steps_block_animated()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L192",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_montar_estado_inicial",
+      "label": "_montar_estado_inicial()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L248",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_config",
+      "label": "_config()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L253",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_cleanup_asyncio_tasks",
+      "label": "_cleanup_asyncio_tasks()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L257",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rerun",
+      "label": "_rerun()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L271",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rodar_ate_pausa_ou_fim",
+      "label": "_rodar_ate_pausa_ou_fim()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L277",
+      "_origin": "ast"
+    },
+    {
+      "id": "any",
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_reset_session",
+      "label": "_reset_session()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L316",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_enqueue_stream",
+      "label": "_enqueue_stream()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L321",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_on_provider_change",
+      "label": "_on_provider_change()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L325",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_render_header",
+      "label": "_render_header()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L352",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_render_topbar",
+      "label": "_render_topbar()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L384",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_render_welcome",
+      "label": "_render_welcome()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L410",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_render_config_form",
+      "label": "_render_config_form()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L427",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_render_msg",
+      "label": "_render_msg()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L473",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rationale_1",
+      "label": "AzimeAI — Chat-based Invoice to Purchase Order processor.  Interface portada d",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rationale_150",
+      "label": "Preview de dataframe. key= obrigatório quando chamado em loop     (múltiplas pr",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L150",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rationale_171",
+      "label": "Pós-processamento determinístico do PC antes de exibir/baixar.      1. Sufixo",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L171",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rationale_193",
+      "label": "Static steps rendered as all-done.",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L193",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rationale_258",
+      "label": "Cancel pending asyncio tasks before Streamlit rerun (Windows fix).",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L258",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rationale_272",
+      "label": "Safe rerun with asyncio cleanup (fixes WinError 10054).",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L272",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rationale_326",
+      "label": "Callback síncrono do radio de provider.      Roda quando usuário muda seleção",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L326",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_rationale_474",
+      "label": "Renderiza uma mensagem. idx usado para key única de dataframes em loop.",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L474",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_init",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "src/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner",
+      "label": "cleaner.py",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_detectar_linha_header",
+      "label": "_detectar_linha_header()",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L80",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_py_dataframe",
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_normalizar_nome_coluna",
+      "label": "_normalizar_nome_coluna()",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L105",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_e_footer",
+      "label": "_e_footer()",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L115",
+      "_origin": "ast"
+    },
+    {
+      "id": "series",
+      "label": "Series",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_limpar_planilha",
+      "label": "limpar_planilha()",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L140",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_linha_para_dict",
+      "label": "linha_para_dict()",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L264",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_safe_str",
+      "label": "_safe_str()",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L290",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_safe_num",
+      "label": "_safe_num()",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L296",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_linhas_para_dataframe_pc",
+      "label": "linhas_para_dataframe_pc()",
+      "file_type": "code",
+      "source_file": "src/cleaner.py",
+      "source_location": "L305",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_rationale_1",
+      "label": "Limpeza de Invoice com pandas: detecta header, descarta metadata/footer, faz for",
+      "file_type": "rationale",
+      "source_file": "src/cleaner.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_rationale_81",
+      "label": "Encontra índice (0-based) da linha de cabeçalho CN a ser usada.      Estratégia:",
+      "file_type": "rationale",
+      "source_file": "src/cleaner.py",
+      "source_location": "L81",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_rationale_116",
+      "label": "Heurística: linhas que NÃO são item válido (total/discount/certificate     /resí",
+      "file_type": "rationale",
+      "source_file": "src/cleaner.py",
+      "source_location": "L116",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_rationale_143",
+      "label": "Lê xlsx/csv, detecta header, normaliza, descarta metadata/footer.      Retorna (",
+      "file_type": "rationale",
+      "source_file": "src/cleaner.py",
+      "source_location": "L143",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_rationale_265",
+      "label": "Converte uma linha limpa em dict pronto para o prompt do LLM.",
+      "file_type": "rationale",
+      "source_file": "src/cleaner.py",
+      "source_location": "L265",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_cleaner_rationale_306",
+      "label": "Converte lista de dicts (LinhaPedidoCompra.model_dump) em DataFrame     com colu",
+      "file_type": "rationale",
+      "source_file": "src/cleaner.py",
+      "source_location": "L306",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph",
+      "label": "graph.py",
+      "file_type": "code",
+      "source_file": "src/graph.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_node_processar",
+      "label": "node_processar()",
+      "file_type": "code",
+      "source_file": "src/graph.py",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_node_hitl",
+      "label": "node_hitl()",
+      "file_type": "code",
+      "source_file": "src/graph.py",
+      "source_location": "L58",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_rotear",
+      "label": "rotear()",
+      "file_type": "code",
+      "source_file": "src/graph.py",
+      "source_location": "L99",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_compilar_grafo",
+      "label": "compilar_grafo()",
+      "file_type": "code",
+      "source_file": "src/graph.py",
+      "source_location": "L115",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_estado_inicial",
+      "label": "estado_inicial()",
+      "file_type": "code",
+      "source_file": "src/graph.py",
+      "source_location": "L134",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_rationale_1",
+      "label": "Grafo LangGraph: processa linha-a-linha, com interrupt para HITL.  Fluxo:     ST",
+      "file_type": "rationale",
+      "source_file": "src/graph.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_rationale_27",
+      "label": "Invoca o LLM na linha[indice_atual] e acumula o resultado.      Semântica full-l",
+      "file_type": "rationale",
+      "source_file": "src/graph.py",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_rationale_59",
+      "label": "Pausa a execução expondo a linha em dúvida.      `interrupt(payload)` suspende o",
+      "file_type": "rationale",
+      "source_file": "src/graph.py",
+      "source_location": "L59",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_rationale_100",
+      "label": "Edge condicional pós-processar.      - Se duvida_pendente ativa -> 'hitl'     -",
+      "file_type": "rationale",
+      "source_file": "src/graph.py",
+      "source_location": "L100",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_rationale_116",
+      "label": "Constrói e compila o StateGraph com MemorySaver (HITL-ready).",
+      "file_type": "rationale",
+      "source_file": "src/graph.py",
+      "source_location": "L116",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_graph_rationale_136",
+      "label": "Monta estado inicial a partir de DataFrame limpo.      `fornecedor` aqui é apena",
+      "file_type": "rationale",
+      "source_file": "src/graph.py",
+      "source_location": "L136",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm",
+      "label": "llm.py",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_provedor_ativo",
+      "label": "_provedor_ativo()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_aplicar_sufixo_moi",
+      "label": "aplicar_sufixo_moi()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L57",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat",
+      "label": "obter_chat()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L73",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat_estruturado",
+      "label": "obter_chat_estruturado()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L87",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat_editor",
+      "label": "obter_chat_editor()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L95",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat_openrouter",
+      "label": "_obter_chat_openrouter()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L103",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat_openrouter_estruturado",
+      "label": "_obter_chat_openrouter_estruturado()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L134",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat_openrouter_editor",
+      "label": "_obter_chat_openrouter_editor()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L151",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat_google",
+      "label": "_obter_chat_google()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L167",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat_google_estruturado",
+      "label": "_obter_chat_google_estruturado()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L195",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_obter_chat_google_editor",
+      "label": "_obter_chat_google_editor()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L207",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_fazer_esqueleto",
+      "label": "_fazer_esqueleto()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L217",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_processar_linha",
+      "label": "processar_linha()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L252",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_aplicar_edicao_pc",
+      "label": "aplicar_edicao_pc()",
+      "file_type": "code",
+      "source_file": "src/llm.py",
+      "source_location": "L405",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_1",
+      "label": "Wrappers de acesso ao ChatNVIDIA (NVIDIA NIM) com retry e fallback OpenRouter.",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_34",
+      "label": "Lê LLM_PROVIDER do env (setado pelo radio em app.py).     Valores: 'nvidia', 'op",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_58",
+      "label": "Garante sufixo '-MOI' no SKU quando for moissanite (determinístico).      As sam",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L58",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_74",
+      "label": "Cria (caching) ChatNVIDIA base sem structured output.",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L74",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_88",
+      "label": "ChatNVIDIA com with_structured_output(LinhaPedidoCompra).",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L88",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_96",
+      "label": "ChatNVIDIA com with_structured_output(EditResponse) pós-PC.",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L96",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_104",
+      "label": "Cria (caching) ChatOpenAI apontando para OpenRouter.",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L104",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_135",
+      "label": "OpenRouter com with_structured_output(LinhaPedidoCompra).      method=\"json_sche",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L135",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_152",
+      "label": "OpenRouter com with_structured_output(EditResponse).      method=\"json_schema\" f",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L152",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_168",
+      "label": "Cria (caching) ChatGoogleGenerativeAI (Gemini).      Gemini aceita structured ou",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L168",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_196",
+      "label": "Google Gemini com with_structured_output(LinhaPedidoCompra).",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L196",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_208",
+      "label": "Google Gemini com with_structured_output(EditResponse).",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L208",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_219",
+      "label": "Cria LinhaPedidoCompra esqueleto com duvida_pendente.",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L219",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_254",
+      "label": "Processa linha respeitando LLM_PROVIDER.      - 'nvidia': só NVIDIA     - 'openr",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L254",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_rationale_407",
+      "label": "Editor conversacional pós-PC respeitando LLM_PROVIDER.      Recebe o PC atual (l",
+      "file_type": "rationale",
+      "source_file": "src/llm.py",
+      "source_location": "L407",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_mappings",
+      "label": "mappings.py",
+      "file_type": "code",
+      "source_file": "src/mappings.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_mappings_detectar_tipo_material",
+      "label": "detectar_tipo_material()",
+      "file_type": "code",
+      "source_file": "src/mappings.py",
+      "source_location": "L125",
+      "_origin": "ast"
+    },
+    {
+      "id": "tipomaterial",
+      "label": "TipoMaterial",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_mappings_montar_perfil",
+      "label": "montar_perfil()",
+      "file_type": "code",
+      "source_file": "src/mappings.py",
+      "source_location": "L158",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_mappings_obter_perfil",
+      "label": "obter_perfil()",
+      "file_type": "code",
+      "source_file": "src/mappings.py",
+      "source_location": "L180",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_mappings_rationale_1",
+      "label": "Mapas estáticos de vocabulário controlado e detecção de tipo de material.  Impor",
+      "file_type": "rationale",
+      "source_file": "src/mappings.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_mappings_rationale_126",
+      "label": "Detecta se a Invoice é zirconia ou moissanite inspecionando     nome do arquivo",
+      "file_type": "rationale",
+      "source_file": "src/mappings.py",
+      "source_location": "L126",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_mappings_rationale_160",
+      "label": "Monta perfil completo combinando base fixa + tipo de pedra + sobreescritas.",
+      "file_type": "rationale",
+      "source_file": "src/mappings.py",
+      "source_location": "L160",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_mappings_rationale_183",
+      "label": "Ponto de entrada único: (tipo_material, perfil_dict).",
+      "file_type": "rationale",
+      "source_file": "src/mappings.py",
+      "source_location": "L183",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_prompts",
+      "label": "prompts.py",
+      "file_type": "code",
+      "source_file": "src/prompts.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_prompts_construir_prompt_usuario",
+      "label": "construir_prompt_usuario()",
+      "file_type": "code",
+      "source_file": "src/prompts.py",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_prompts_construir_prompt_correcao",
+      "label": "construir_prompt_correcao()",
+      "file_type": "code",
+      "source_file": "src/prompts.py",
+      "source_location": "L66",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_prompts_construir_prompt_edicao",
+      "label": "construir_prompt_edicao()",
+      "file_type": "code",
+      "source_file": "src/prompts.py",
+      "source_location": "L104",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_prompts_rationale_1",
+      "label": "Prompts estruturados do agente.  Mantidos separados para facilitar iteração sem",
+      "file_type": "rationale",
+      "source_file": "src/prompts.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_prompts_rationale_48",
+      "label": "Constrói o prompt do usuário com a linha Invoice e o perfil.      Inclui dicas e",
+      "file_type": "rationale",
+      "source_file": "src/prompts.py",
+      "source_location": "L48",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_prompts_rationale_68",
+      "label": "Reenvia o erro do Pydantic para o LLM autocorrigir (tentativa 2).",
+      "file_type": "rationale",
+      "source_file": "src/prompts.py",
+      "source_location": "L68",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_prompts_rationale_105",
+      "label": "Constrói prompt do usuário para o editor de PC (pós-LLM, conversacional).",
+      "file_type": "rationale",
+      "source_file": "src/prompts.py",
+      "source_location": "L105",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema",
+      "label": "schema.py",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_linhapedidocompra",
+      "label": "LinhaPedidoCompra",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "basemodel",
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_linhapedidocompra_chk_qty",
+      "label": "._chk_qty()",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L122",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_linhapedidocompra_chk_nao_neg",
+      "label": "._chk_nao_neg()",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L129",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_linhapedidocompra_chk_cat",
+      "label": "._chk_cat()",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L136",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_linhapedidocompra_chk_banho",
+      "label": "._chk_banho()",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L144",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_linhapedidocompra_chk_tipo_pedra",
+      "label": "._chk_tipo_pedra()",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L152",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_editresponse",
+      "label": "EditResponse",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L159",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_pedidoestado",
+      "label": "PedidoEstado",
+      "file_type": "code",
+      "source_file": "src/schema.py",
+      "source_location": "L178",
+      "_origin": "ast"
+    },
+    {
+      "id": "typeddict",
+      "label": "TypedDict",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_rationale_1",
+      "label": "Schema Pydantic do Pedido de Compra + Estado do LangGraph.  A classe LinhaPedido",
+      "file_type": "rationale",
+      "source_file": "src/schema.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_rationale_30",
+      "label": "Uma linha pronta para o Pedido de Compra (ERP).      Use somente campos abaixo.",
+      "file_type": "rationale",
+      "source_file": "src/schema.py",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_rationale_160",
+      "label": "Resposta do LLM-editor: PC completo editado + mensagem curta.      Sempre devolv",
+      "file_type": "rationale",
+      "source_file": "src/schema.py",
+      "source_location": "L160",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_schema_rationale_179",
+      "label": "Estado do grafo LangGraph.      Linhas guardadas como dict (não BaseModel) para",
+      "file_type": "rationale",
+      "source_file": "src/schema.py",
+      "source_location": "L179",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos",
+      "label": "tamanhos.py",
+      "file_type": "code",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_extrair_tamanho_cm",
+      "label": "extrair_tamanho_cm()",
+      "file_type": "code",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_parse_anel",
+      "label": "_parse_anel()",
+      "file_type": "code",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L57",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_expandir_linhas",
+      "label": "expandir_linhas()",
+      "file_type": "code",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_expandir_lista",
+      "label": "expandir_lista()",
+      "file_type": "code",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L130",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_rationale_1",
+      "label": "Regras de Tamanho do Pedido de Compra por categoria.  Roda DEPOIS do LLM e ANTES",
+      "file_type": "rationale",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_rationale_39",
+      "label": "Soma todas as medidas 'NNcm' no texto e retorna o inteiro arredondado.      \"15,",
+      "file_type": "rationale",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L39",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_rationale_58",
+      "label": "Extrai [(tamanho, qty_absoluta), ...] de \"#5 - 40 #6 - 35 #7 - 45\".      Aceita",
+      "file_type": "rationale",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L58",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_rationale_76",
+      "label": "Aplica a regra de tamanho a uma LinhaPedidoCompra (dict).      Retorna 1+ linhas",
+      "file_type": "rationale",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L76",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_tamanhos_rationale_131",
+      "label": "Aplica expandir_linhas a cada item e achata o resultado.",
+      "file_type": "rationale",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L131",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "app",
+      "target": "io",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "re",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "uuid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "pandas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "streamlit",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_cleaner",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_graph",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_llm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_tamanhos",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_load_logo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_esc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_label_row",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_msg_user",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_msg_assistant",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_msg_error",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_msg_success",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_msg_warning",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_msg_loading",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_file_chip_html",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_df_preview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "app_df_preview",
+      "target": "app_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_normalizar_pc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_steps_block_animated",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_montar_estado_inicial",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L248",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_cleanup_asyncio_tasks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L257",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_rerun",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L271",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_rodar_ate_pausa_ou_fim",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L277",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rodar_ate_pausa_ou_fim",
+      "target": "any",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L277",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_reset_session",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L316",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_enqueue_stream",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L321",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_on_provider_change",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L325",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_header",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L352",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_topbar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L384",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_welcome",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L410",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_config_form",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L427",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_render_msg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L473",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_cleaner",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L661",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "langgraph_types",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L759",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_llm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L856",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L910",
+      "weight": 1.0
+    },
+    {
+      "source": "app_label_row",
+      "target": "app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "app_msg_user",
+      "target": "app_label_row",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "app_msg_assistant",
+      "target": "app_label_row",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "app_msg_loading",
+      "target": "app_label_row",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "app_msg_loading",
+      "target": "app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "app_file_chip_html",
+      "target": "app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "app_df_preview",
+      "target": "app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "app_steps_block_animated",
+      "target": "app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rerun",
+      "target": "app_cleanup_asyncio_tasks",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L273",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rodar_ate_pausa_ou_fim",
+      "target": "app_config",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L278",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_header",
+      "target": "app_on_provider_change",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "source_file": "app.py",
+      "source_location": "L374",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_header",
+      "target": "app_reset_session",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L380",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_header",
+      "target": "app_rerun",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L381",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_topbar",
+      "target": "app_esc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L397",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_config_form",
+      "target": "app_rerun",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L456",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "app_msg_error",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L480",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "app_msg_success",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L482",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "app_msg_warning",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L484",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "app_msg_loading",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L486",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "app_df_preview",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L489",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "app_normalizar_pc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L495",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "app_msg_user",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L503",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "app_msg_assistant",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L505",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_1",
+      "target": "app",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_150",
+      "target": "app_df_preview",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_171",
+      "target": "app_normalizar_pc",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_193",
+      "target": "app_steps_block_animated",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_258",
+      "target": "app_cleanup_asyncio_tasks",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L258",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_272",
+      "target": "app_rerun",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L272",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_326",
+      "target": "app_on_provider_change",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L326",
+      "weight": 1.0
+    },
+    {
+      "source": "app_rationale_474",
+      "target": "app_render_msg",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L474",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "pandas",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_mappings",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_cleaner_detectar_linha_header",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_detectar_linha_header",
+      "target": "src_cleaner_py_dataframe",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_cleaner_normalizar_nome_coluna",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_cleaner_e_footer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_e_footer",
+      "target": "series",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_cleaner_limpar_planilha",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_limpar_planilha",
+      "target": "src_cleaner_py_dataframe",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_cleaner_linha_para_dict",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L264",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_linha_para_dict",
+      "target": "series",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L264",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_cleaner_safe_str",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_cleaner_safe_num",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L296",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_cleaner_linhas_para_dataframe_pc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L305",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_linhas_para_dataframe_pc",
+      "target": "src_cleaner_py_dataframe",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L305",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_limpar_planilha",
+      "target": "src_cleaner_detectar_linha_header",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_limpar_planilha",
+      "target": "src_cleaner_normalizar_nome_coluna",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_limpar_planilha",
+      "target": "src_cleaner_e_footer",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_linha_para_dict",
+      "target": "src_cleaner_safe_str",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L267",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_linha_para_dict",
+      "target": "src_cleaner_safe_num",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L279",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_linhas_para_dataframe_pc",
+      "target": "src_cleaner_py_dataframe",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L309",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_rationale_1",
+      "target": "src_cleaner",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_rationale_81",
+      "target": "src_cleaner_detectar_linha_header",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_rationale_116",
+      "target": "src_cleaner_e_footer",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_rationale_143",
+      "target": "src_cleaner_limpar_planilha",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_rationale_265",
+      "target": "src_cleaner_linha_para_dict",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L265",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_rationale_306",
+      "target": "src_cleaner_linhas_para_dataframe_pc",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L306",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "langgraph_checkpoint_memory",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "langgraph_graph",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "langgraph_types",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_schema",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_llm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_graph_node_processar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_node_processar",
+      "target": "src_schema_pedidoestado",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_graph_node_hitl",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_node_hitl",
+      "target": "src_schema_pedidoestado",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_graph_rotear",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_rotear",
+      "target": "src_schema_pedidoestado",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_graph_compilar_grafo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_graph_estado_inicial",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_estado_inicial",
+      "target": "src_schema_pedidoestado",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_compilar_grafo",
+      "target": "src_graph_node_processar",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "source_file": "src/graph.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_compilar_grafo",
+      "target": "src_graph_node_hitl",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "source_file": "src/graph.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_compilar_grafo",
+      "target": "src_graph_rotear",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "source_file": "src/graph.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_rationale_1",
+      "target": "src_graph",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_rationale_27",
+      "target": "src_graph_node_processar",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_rationale_59",
+      "target": "src_graph_node_hitl",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_rationale_100",
+      "target": "src_graph_rotear",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_rationale_116",
+      "target": "src_graph_compilar_grafo",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_rationale_136",
+      "target": "src_graph_estado_inicial",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "pydantic",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_schema",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_prompts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_provedor_ativo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_aplicar_sufixo_moi",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat_estruturado",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat_editor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat_openrouter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat_openrouter_estruturado",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat_openrouter_editor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat_google",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat_google_estruturado",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_obter_chat_google_editor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L207",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_fazer_esqueleto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L217",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_fazer_esqueleto",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L217",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_processar_linha",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L252",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L252",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_aplicar_edicao_pc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L405",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_estruturado",
+      "target": "src_llm_obter_chat",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_editor",
+      "target": "src_llm_obter_chat",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_openrouter_estruturado",
+      "target": "src_llm_obter_chat_openrouter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_openrouter_editor",
+      "target": "src_llm_obter_chat_openrouter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_google_estruturado",
+      "target": "src_llm_obter_chat_google",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L199",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_google_editor",
+      "target": "src_llm_obter_chat_google",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L211",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_fazer_esqueleto",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_fazer_esqueleto",
+      "target": "src_llm_aplicar_sufixo_moi",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_llm_provedor_ativo",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L264",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_llm_obter_chat_estruturado",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L318",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_llm_fazer_esqueleto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L323",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_llm_obter_chat_openrouter_estruturado",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L327",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_llm_obter_chat_google",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L346",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_aplicar_edicao_pc",
+      "target": "src_llm_provedor_ativo",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L422",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_aplicar_edicao_pc",
+      "target": "src_llm_obter_chat_editor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L444",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_aplicar_edicao_pc",
+      "target": "src_llm_obter_chat_openrouter_editor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L452",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_aplicar_edicao_pc",
+      "target": "src_llm_obter_chat_google_editor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L465",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_1",
+      "target": "src_llm",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_34",
+      "target": "src_llm_provedor_ativo",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_58",
+      "target": "src_llm_aplicar_sufixo_moi",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_74",
+      "target": "src_llm_obter_chat",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_88",
+      "target": "src_llm_obter_chat_estruturado",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_96",
+      "target": "src_llm_obter_chat_editor",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_104",
+      "target": "src_llm_obter_chat_openrouter",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_135",
+      "target": "src_llm_obter_chat_openrouter_estruturado",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_152",
+      "target": "src_llm_obter_chat_openrouter_editor",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_168",
+      "target": "src_llm_obter_chat_google",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_196",
+      "target": "src_llm_obter_chat_google_estruturado",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_208",
+      "target": "src_llm_obter_chat_google_editor",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_219",
+      "target": "src_llm_fazer_esqueleto",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_254",
+      "target": "src_llm_processar_linha",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L254",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_rationale_407",
+      "target": "src_llm_aplicar_edicao_pc",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L407",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings",
+      "target": "src_mappings_detectar_tipo_material",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_detectar_tipo_material",
+      "target": "tipomaterial",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings",
+      "target": "src_mappings_montar_perfil",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_montar_perfil",
+      "target": "tipomaterial",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings",
+      "target": "src_mappings_obter_perfil",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_obter_perfil",
+      "target": "tipomaterial",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_obter_perfil",
+      "target": "src_mappings_detectar_tipo_material",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_obter_perfil",
+      "target": "src_mappings_montar_perfil",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_rationale_1",
+      "target": "src_mappings",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_rationale_126",
+      "target": "src_mappings_detectar_tipo_material",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_rationale_160",
+      "target": "src_mappings_montar_perfil",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mappings_rationale_183",
+      "target": "src_mappings_obter_perfil",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/mappings.py",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts",
+      "target": "src_mappings",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts",
+      "target": "src_schema",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts",
+      "target": "src_prompts_construir_prompt_usuario",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts",
+      "target": "src_prompts_construir_prompt_correcao",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts",
+      "target": "src_prompts_construir_prompt_edicao",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts_rationale_1",
+      "target": "src_prompts",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts_rationale_48",
+      "target": "src_prompts_construir_prompt_usuario",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts_rationale_68",
+      "target": "src_prompts_construir_prompt_correcao",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "src_prompts_rationale_105",
+      "target": "src_prompts_construir_prompt_edicao",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/prompts.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema",
+      "target": "pydantic",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_linhapedidocompra",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_linhapedidocompra",
+      "target": "src_schema_linhapedidocompra_chk_qty",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_linhapedidocompra",
+      "target": "src_schema_linhapedidocompra_chk_nao_neg",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_linhapedidocompra",
+      "target": "src_schema_linhapedidocompra_chk_cat",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_linhapedidocompra",
+      "target": "src_schema_linhapedidocompra_chk_banho",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_linhapedidocompra",
+      "target": "src_schema_linhapedidocompra_chk_tipo_pedra",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema",
+      "target": "src_schema_editresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_editresponse",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema",
+      "target": "src_schema_pedidoestado",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_pedidoestado",
+      "target": "typeddict",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_rationale_1",
+      "target": "src_schema",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_rationale_30",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_rationale_160",
+      "target": "src_schema_editresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "src_schema_rationale_179",
+      "target": "src_schema_pedidoestado",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schema.py",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos",
+      "target": "re",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos",
+      "target": "src_tamanhos_extrair_tamanho_cm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos",
+      "target": "src_tamanhos_parse_anel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos",
+      "target": "src_tamanhos_expandir_linhas",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos",
+      "target": "src_tamanhos_expandir_lista",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos_expandir_linhas",
+      "target": "src_tamanhos_parse_anel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos_expandir_linhas",
+      "target": "src_tamanhos_extrair_tamanho_cm",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos_expandir_lista",
+      "target": "src_tamanhos_expandir_linhas",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos_rationale_1",
+      "target": "src_tamanhos",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos_rationale_39",
+      "target": "src_tamanhos_extrair_tamanho_cm",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos_rationale_58",
+      "target": "src_tamanhos_parse_anel",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos_rationale_76",
+      "target": "src_tamanhos_expandir_linhas",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tamanhos_rationale_131",
+      "target": "src_tamanhos_expandir_lista",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/tamanhos.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_cleaner_limpar_planilha",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_cleaner_linhas_para_dataframe_pc",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_graph_compilar_grafo",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_graph_estado_inicial",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_llm_aplicar_sufixo_moi",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_tamanhos_expandir_lista",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "src_llm_aplicar_edicao_pc",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L856",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner",
+      "target": "src_mappings_obter_perfil",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_schema_pedidoestado",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_llm_processar_linha",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph",
+      "target": "src_cleaner_linha_para_dict",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_schema_editresponse",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_prompts_construir_prompt_usuario",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_prompts_construir_prompt_correcao",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_prompts_construir_prompt_edicao",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app_normalizar_pc",
+      "target": "src_llm_aplicar_sufixo_moi",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "app_normalizar_pc",
+      "target": "src_tamanhos_expandir_lista",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L189",
+      "weight": 1.0
+    },
+    {
+      "source": "app_montar_estado_inicial",
+      "target": "src_graph_estado_inicial",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L250",
+      "weight": 1.0
+    },
+    {
+      "source": "app_render_msg",
+      "target": "src_cleaner_linhas_para_dataframe_pc",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L496",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cleaner_limpar_planilha",
+      "target": "src_mappings_obter_perfil",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/cleaner.py",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_node_processar",
+      "target": "src_llm_processar_linha",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_estado_inicial",
+      "target": "src_cleaner_linha_para_dict",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/graph.py",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_fazer_esqueleto",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_prompts_construir_prompt_usuario",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L265",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_prompts_construir_prompt_correcao",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L288",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_aplicar_edicao_pc",
+      "target": "src_prompts_construir_prompt_edicao",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.py",
+      "source_location": "L423",
+      "weight": 1.0
+    },
+    {
+      "source": "src_graph_compilar_grafo",
+      "target": "src_schema_pedidoestado",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/graph.py",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_estruturado",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/llm.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_editor",
+      "target": "src_schema_editresponse",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/llm.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_openrouter_estruturado",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/llm.py",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_openrouter_editor",
+      "target": "src_schema_editresponse",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/llm.py",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_google_estruturado",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/llm.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_obter_chat_google_editor",
+      "target": "src_schema_editresponse",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/llm.py",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_processar_linha",
+      "target": "src_schema_linhapedidocompra",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/llm.py",
+      "source_location": "L384",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -11,6 +11,7 @@ O checkpointer (MemorySaver) é OBRIGATÓRIO para que o estado sobreviva
 from __future__ import annotations
 
 import logging
+import re
 from typing import Optional
 
 from langgraph.checkpoint.memory import MemorySaver
@@ -21,6 +22,27 @@ from .schema import PedidoEstado, LinhaPedidoCompra
 from .llm import processar_linha
 
 logger = logging.getLogger(__name__)
+
+# Palavras-chave para detectar se motivo_duvida menciona SÓ pedra/zirconia
+# (nesses casos não abrimos HITL — user preenche depois).
+_RE_SO_PEDRA_ZIRCONIA = re.compile(
+    r"\b(pedra|zirconia|zirc\xf4nia)\b", re.IGNORECASE
+)
+# Palavras-chave de OUTROS campos que exigem HITL
+_RE_OUTROS_CAMPOS = re.compile(
+    r"\b(categoria|banho|marca|codigo_fornecedor|c\xf3digo|tamanho|"
+    r"quantidade|peso|labor|silver|prata|material|foob|"
+    r"ref|pre\xE7o|price|size|qty|unit)\b", re.IGNORECASE
+)
+
+
+def _so_duvida_pedra_zirconia(motivo: str) -> bool:
+    """True se motivo menciona apenas pedra/zirconia (sem outros campos)."""
+    if not motivo:
+        return False
+    tem_pedra_zir = bool(_RE_SO_PEDRA_ZIRCONIA.search(motivo))
+    tem_outros = bool(_RE_OUTROS_CAMPOS.search(motivo))
+    return tem_pedra_zir and not tem_outros
 
 
 def node_processar(state: PedidoEstado) -> dict:
@@ -48,10 +70,19 @@ def node_processar(state: PedidoEstado) -> dict:
     processadas = list(state.get("linhas_processadas", []))
     processadas.append(saida_dict)
 
+    # Filtro: se a única dúvida é pedra/zirconia, não abrir HITL.
+    # Usuário preenche pedra/zirconia manualmente depois no PC final.
+    abrir_hitl = saida.duvida_pendente
+    if abrir_hitl and _so_duvida_pedra_zirconia(saida.motivo_duvida or ""):
+        logger.info(
+            "Dúvida apenas em pedra/zirconia (ref=%s) — HITL suprimido.",
+            linha_dict.get("ref"))
+        abrir_hitl = False
+
     return {
         "linhas_processadas": processadas,
         "indice_atual": indice + 1,
-        "duvida_pendente": saida_dict if saida.duvida_pendente else None,
+        "duvida_pendente": saida_dict if abrir_hitl else None,
     }
 
 

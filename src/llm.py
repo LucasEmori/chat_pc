@@ -54,6 +54,22 @@ _CHAT_GOOGLE_EDITOR = None
 _FALLBACK_AVISADO = False
 
 
+def aplicar_sufixo_moi(codigo: str, tipo_pedra: str) -> str:
+    """Garante sufixo '-MOI' no SKU quando for moissanite (determinístico).
+
+    As samples reais (samples/Pedidos de Compra/000348 etc.) mostram que o SKU
+    de itens moissanite recebe '-MOI' (ex.: SB08094-L -> SB08094-L-MOI).
+    Em vez de confiar no LLM, aplicamos aqui. Idempotente.
+    """
+    if not codigo:
+        return codigo
+    codigo = str(codigo).strip()
+    tipo = (tipo_pedra or "").upper().strip()
+    if tipo == "MOISSANITE" and not codigo.upper().endswith("-MOI"):
+        return f"{codigo}-MOI"
+    return codigo
+
+
 def obter_chat():
     """Cria (caching) ChatNVIDIA base sem structured output."""
     global _CHAT
@@ -116,25 +132,34 @@ def _obter_chat_openrouter():
 
 
 def _obter_chat_openrouter_estruturado():
-    """OpenRouter com with_structured_output(LinhaPedidoCompra)."""
+    """OpenRouter com with_structured_output(LinhaPedidoCompra).
+
+    method="json_schema" envia o schema Pydantic no response_format
+    (strict) — modelo obrigado a respeitar campos, não só devolver JSON
+    válido. Reduz ValidationError que derrubavam em esqueleto HITL.
+    """
     global _CHAT_OR_STRUCTURED
     if _CHAT_OR_STRUCTURED is None:
         chat = _obter_chat_openrouter()
         if chat is not None:
             _CHAT_OR_STRUCTURED = chat.with_structured_output(
-                LinhaPedidoCompra, method="json_mode"
+                LinhaPedidoCompra, method="json_schema"
             )
     return _CHAT_OR_STRUCTURED
 
 
 def _obter_chat_openrouter_editor():
-    """OpenRouter com with_structured_output(EditResponse)."""
+    """OpenRouter com with_structured_output(EditResponse).
+
+    method="json_schema" força schema strict (mesma razão do wrapper
+    de LinhaPedidoCompra). Evita JSON válido mas com campos faltando.
+    """
     global _CHAT_OR_EDITOR
     if _CHAT_OR_EDITOR is None:
         chat = _obter_chat_openrouter()
         if chat is not None:
             _CHAT_OR_EDITOR = chat.with_structured_output(
-                EditResponse, method="json_mode"
+                EditResponse, method="json_schema"
             )
     return _CHAT_OR_EDITOR
 
@@ -194,7 +219,10 @@ def _fazer_esqueleto(linha: dict, perfil: dict, erro_str: str,
     """Cria LinhaPedidoCompra esqueleto com duvida_pendente."""
     return LinhaPedidoCompra(
         categoria="BRINCO",  # placeholder; humano corrigirá
-        codigo_fornecedor=str(linha.get("ref") or linha.get("codigo") or ""),
+        codigo_fornecedor=aplicar_sufixo_moi(
+            str(linha.get("ref") or linha.get("codigo") or ""),
+            perfil.get("tipo_pedra_padrao", "ZIRCONIA / FUSION"),
+        ),
         foto="",
         material=perfil.get("material_padrao", "PRATA"),
         fornecedor=perfil.get("codigo", ""),
@@ -234,6 +262,8 @@ def processar_linha(linha: dict, perfil: dict, fornecedor_nome: str,
     """
     global _FALLBACK_AVISADO
     provedor = _provedor_ativo()
+    logger.info("PROVEDOR=%s  ref=%s", provedor,
+                linha.get("ref") or linha.get("codigo", "?"))
     mensagem_user = construir_prompt_usuario(linha, perfil, fornecedor_nome)
     ultima_exc: Optional[Exception] = None
     ultima_saida_dict: dict = {}
@@ -251,19 +281,51 @@ def processar_linha(linha: dict, perfil: dict, fornecedor_nome: str,
                 return LinhaPedidoCompra.model_validate(saida)
             except Exception as e:
                 ultima_exc = e
+                err_str = str(e)
                 logger.warning(
                     "%s tentativa %s falhou: %s",
-                    nome_prov.upper(), tentativa, e,
+                    nome_prov.upper(), tentativa, err_str,
+                )
+                if nome_prov == "openrouter" and (
+                    "json_schema" in err_str.lower()
+                    or "response_format" in err_str.lower()
+                    or "not supported" in err_str.lower()
+                ):
+                    model = os.getenv("OPENROUTER_MODEL", "")
+                    logger.warning(
+                        "OpenRouter model '%s' may not support "
+                        "json_schema. Try a model that supports "
+                        "structured output (e.g. "
+                        "openai/gpt-4o-mini, anthropic/claude-3-haiku). "
+                        "Set OPENROUTER_MODEL env var.",
+                        model,
+                    )
+                import time as _time
+                is_rate_limit = (
+                    "429" in err_str
+                    or "too many requests" in err_str.lower()
+                    or "ratelimiterror" in err_str.lower().replace(" ", "")
+                    or "rate limit" in err_str.lower()
                 )
                 if tentativa < max_tentativas:
-                    try:
-                        nova_user = construir_prompt_correcao(
-                            str(e), linha, perfil,
-                            fornecedor_nome, ultima_saida_dict,
+                    if is_rate_limit:
+                        backoff = 2 ** tentativa * 5
+                        logger.warning(
+                            "%s rate limited. Backoff %ss...",
+                            nome_prov.upper(), backoff,
                         )
-                        mensagem_user = nova_user
-                    except Exception as inner:
-                        logger.error("construir prompt correção falhou: %s", inner)
+                        _time.sleep(backoff)
+                    else:
+                        try:
+                            nova_user = construir_prompt_correcao(
+                                str(e), linha, perfil,
+                                fornecedor_nome, ultima_saida_dict,
+                            )
+                            mensagem_user = nova_user
+                        except Exception as inner:
+                            logger.error(
+                                "construir prompt correção falhou: %s", inner
+                            )
         return None
 
     def _tentar_google_unica() -> Optional[LinhaPedidoCompra]:
@@ -392,6 +454,7 @@ def aplicar_edicao_pc(pc_atual: list[dict], msg_usuario: str,
         return pc_atual, "PC vazio, nada a editar."
 
     provedor = _provedor_ativo()
+    logger.info("EDITOR PROVEDOR=%s", provedor)
     prompt = construir_prompt_edicao(pc_atual, msg_usuario, perfil)
 
     def _invocar(chat_editor) -> Optional[EditResponse]:

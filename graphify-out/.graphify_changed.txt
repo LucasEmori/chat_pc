@@ -1,0 +1,21 @@
+C:\Projetos\chat_pc\.claude\settings.local.json
+C:\Projetos\chat_pc\app.py
+C:\Projetos\chat_pc\design\Web-Prototype\DESIGN-MANIFEST.json
+C:\Projetos\chat_pc\design\Web-Prototype\critique.json
+C:\Projetos\chat_pc\src\__init__.py
+C:\Projetos\chat_pc\src\cleaner.py
+C:\Projetos\chat_pc\src\graph.py
+C:\Projetos\chat_pc\src\llm.py
+C:\Projetos\chat_pc\src\mappings.py
+C:\Projetos\chat_pc\src\prompts.py
+C:\Projetos\chat_pc\src\schema.py
+C:\Projetos\chat_pc\src\tamanhos.py
+C:\Projetos\chat_pc\PRODUCT.md
+C:\Projetos\chat_pc\README.md
+C:\Projetos\chat_pc\design\MASTER.md
+C:\Projetos\chat_pc\design\Web-Prototype\DESIGN-HANDOFF.md
+C:\Projetos\chat_pc\design\Web-Prototype\index.html
+C:\Projetos\chat_pc\requirements.txt
+C:\Projetos\chat_pc\azimeai (1).png
+C:\Projetos\chat_pc\design\Web-Prototype\mr9q5395-azimeai-_1_.png
+C:\Projetos\chat_pc\design\logo.svg

@@ -26,7 +26,7 @@ CATEGORIA_CN_PT: dict[str, str] = {
     "戒": "ANEL",
     "项链": "COLAR",
     "手链": "PULSEIRA",
-    "手镯": "PULSEIRA",
+    "手镯": "BRACELETE",
     "手环": "PULSEIRA",
     "吊坠": "PINGENTE",
     "坠": "PINGENTE",
@@ -36,6 +36,24 @@ CATEGORIA_CN_PT: dict[str, str] = {
     "套": "CONJUNTO",
     "胸针": "BROCHE",
     "戒指/吊坠": "PINGENTE",
+}
+
+# Categoria: inglês -> PT-BR (invoices CNY com coluna "Description" em EN)
+CATEGORIA_EN_PT: dict[str, str] = {
+    "earring": "BRINCO",
+    "earrings": "BRINCO",
+    "ring": "ANEL",
+    "rings": "ANEL",
+    "necklace": "COLAR",
+    "bracelet": "BRACELETE",
+    "bangle": "BRACELETE",
+    "chain": "CORRENTE",
+    "pendant": "PINGENTE",
+    "brooch": "BROCHE",
+    "pin": "BROCHE",
+    "ring set": "CONJUNTO",
+    "set": "CONJUNTO",
+    "ring/pendant": "PINGENTE",
 }
 
 # Plating (banho) -> vocabulário ERP
@@ -107,6 +125,78 @@ PEDRA_STONE_PT: dict[str, tuple[str, str]] = {
 # AL, GR, NV — definido pelo usuário antes do processamento
 MARCAS_VALIDAS = {"AL", "GR", "NV"}
 
+# ============================================================
+# Terminologia por marca (PC final)
+# ------------------------------------------------------------
+# LLM gera vocabulário base (RÓDIO, OURO, COLAR) — resolvido
+# por marca na saída do PC. Mantém schema/prompt estáveis.
+# ------------------------------------------------------------
+# Marca AL:                  RÓDIO -> RÓDIO  | OURO -> OURO  | COLAR -> CORRENTE
+# Marca GR:                  RÓDIO -> RÓDIO  | OURO -> OURO  | COLAR -> CORRENTE
+# Marca NV:                  RÓDIO -> RODIO BRANCO (sem acento) | OURO -> DOURADO | COLAR -> COLAR
+# Demais banhos/categorias:  inalterados em todas as marcas.
+# ============================================================
+
+# Reescrita de BANHO por marca. Só mapeia valores que mudam;
+# ausência na chave = manter o valor base retornado pelo LLM.
+_REESCRITA_BANHO_POR_MARCA: dict[str, dict[str, str]] = {
+    "NV": {
+        "RÓDIO": "RODIO BRANCO",  # sem acento, intencional
+        "OURO": "DOURADO",
+    },
+    # AL e GR: banho base é mantido (RÓDIO->RÓDIO, OURO->OURO).
+}
+
+# Reescrita de CATEGORIA por marca. Só "COLAR" muda:
+# AL/GR -> "CORRENTE"; NV mantém "COLAR".
+_REESCRITA_CATEGORIA_POR_MARCA: dict[str, dict[str, str]] = {
+    "AL": {"COLAR": "CORRENTE"},
+    "GR": {"COLAR": "CORRENTE"},
+    # NV: "COLAR" -> "COLAR" (mantém).
+}
+
+
+def resolver_banho(banho_base: str, marca: str) -> str:
+    """Converte o banho base (vocabulário do LLM) na terminologia
+    final da marca escolhida pelo operador.
+
+    Args:
+        banho_base: valor retornado pelo LLM (ex.: 'RÓDIO', 'OURO').
+        marca: 'AL', 'GR' ou 'NV'.
+
+    Returns:
+        Terminologia final para o PC (ex.: 'RODIO BRANCO' se NV).
+        Se a marca não estiver em MARCAS_VALIDAS ou o banho não
+        estiver no mapa de reescrita, devolve banho_base inalterado.
+    """
+    if marca not in MARCAS_VALIDAS:
+        return banho_base
+    tabela = _REESCRITA_BANHO_POR_MARCA.get(marca, {})
+    return tabela.get(banho_base, banho_base)
+
+
+def resolver_categoria(categoria_base: str, marca: str) -> str:
+    """Converte a categoria base (vocabulário do LLM) na terminologia
+    final da marca escolhida pelo operador.
+
+    Regra atual: apenas 'COLAR' varia — vira 'CORRENTE' em AL/GR,
+    permanece 'COLAR' em NV. Demais categorias são inalteradas.
+
+    Args:
+        categoria_base: valor retornado pelo LLM (ex.: 'COLAR').
+        marca: 'AL', 'GR' ou 'NV'.
+
+    Returns:
+        Terminologia final para o PC. Se a marca não estiver em
+        MARCAS_VALIDAS ou a categoria não estiver no mapa de
+        reescrita, devolve categoria_base inalterada.
+    """
+    if marca not in MARCAS_VALIDAS:
+        return categoria_base
+    tabela = _REESCRITA_CATEGORIA_POR_MARCA.get(marca, {})
+    return tabela.get(categoria_base, categoria_base)
+
+
 # Lista de fornecedores (códigos ERP)
 # O operador digita o código manualmente
 
@@ -167,6 +257,8 @@ def montar_perfil(tipo: TipoMaterial, marca: str = "AL",
     perfil = dict(PERFIL_FORNECEDOR_BASE)
     perfil["codigo"] = codigo_fornecedor
     perfil["marca"] = marca
+    # Material por marca: NV -> SEMIJOIA; AL/GR -> PRATA
+    perfil["material_padrao"] = "SEMIJOIA" if marca == "NV" else "PRATA"
     if tipo == "MOISSANITE":
         perfil["tipo_pedra_padrao"] = "MOISSANITE"
     else:

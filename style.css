@@ -113,183 +113,45 @@ p, span, div, label, li { font-family: var(--font-body) !important; }
 #stAppViewBlockContainer { padding-top: 0 !important; }
 
 /* ============================================================
-   App shell — Streamlit sidebar becomes our sidebar
+   Hide sidebar completely — logo moved to header bar
    ============================================================ */
 
-[data-testid="stSidebar"] {
-    background: #0d0d0d !important;
-    border-right: 1px solid var(--border) !important;
-    min-width: var(--sidebar-w) !important;
-    max-width: var(--sidebar-w) !important;
-    padding: 0 !important;
-}
-[data-testid="stSidebar"] > div:first-child {
-    padding: 0 !important;
-}
+[data-testid="stSidebar"] { display: none !important; }
+[data-testid="stSidebarCollapsedControl"] { display: none !important; }
 
-.azime-brand {
-    display: flex; align-items: center; gap: 10px;
-    padding: 18px 18px 16px;
-}
-.azime-brand-mark {
-    width: 26px; height: 26px; border-radius: 7px;
-    background: var(--fg); color: var(--accent-on);
-    display: grid; place-items: center;
-    font-family: var(--font-body); font-weight: 600; font-size: 15px;
-    letter-spacing: -0.02em; flex: none;
-}
-.azime-brand-name { font-size: 15px; font-weight: 500; letter-spacing: -0.01em; }
-.azime-brand-name .dim { color: var(--meta); font-weight: 400; }
+/* ============================================================
+   Header bar — logo top-left
+   ============================================================ */
 
-.azime-side-actions { padding: 0 12px 10px; }
-.azime-side-actions .stButton > button {
-    width: 100% !important;
-    display: flex !important; align-items: center !important; gap: 8px !important;
-    justify-content: flex-start !important;
-    padding: 9px 11px !important;
-    background: transparent !important;
-    border: 1px solid var(--border) !important;
-    border-radius: var(--radius-sm) !important;
-    color: var(--fg) !important;
-    font-size: var(--text-sm) !important;
-    transition: background var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease) !important;
+.azime-header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px 12px;
 }
-.azime-side-actions .stButton > button:hover {
-    background: var(--surface-3) !important; border-color: var(--border-soft) !important;
+.azime-header-bar svg { display: block; }
+.azime-header-bar .azime-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-.azime-side-actions .stButton > button p { margin: 0 !important; font-size: var(--text-sm) !important; }
-.azime-side-actions .stButton > button svg { flex: none; opacity: 0.85; }
-
-.azime-sessions-label {
-    padding: 16px 20px 6px;
-    font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.09em;
-    color: var(--meta);
-}
-.azime-sessions {
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 8px !important;
-}
-.azime-sessions li,
-li.azime-session {
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 8px 10px !important;
+.azime-header-bar .azime-header-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    cursor: pointer;
+    background: transparent;
     color: var(--muted);
     font-size: var(--text-sm);
-    transition: background var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease);
-    white-space: nowrap; overflow: hidden;
-}
-.azime-sessions li::marker,
-.azime-sessions li::before,
-.azime-session::marker,
-.azime-session::before {
-    content: "" !important;
-    list-style: none !important;
-    display: none !important;
-}
-.azime-sessions li:hover,
-.azime-session:hover { background: var(--surface); color: var(--fg-2); }
-.azime-sessions li[data-current="true"],
-.azime-session[data-current="true"] { background: var(--surface); color: var(--fg); }
-.azime-sessions .dot,
-.azime-session .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--meta); flex:none; opacity:.7; }
-.azime-sessions li[data-current="true"] .dot,
-.azime-session[data-current="true"] .dot { background: var(--fg); opacity: 1; }
-.azime-sessions .label,
-.azime-session .label { overflow:hidden; text-overflow:ellipsis; }
-
-/* sidebar inner column needs flex layout so spacer + footer stick to bottom */
-[data-testid="stSidebar"] [data-testid="stVerticalBlock"],
-[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: 100vh !important;
-}
-[data-testid="stSidebar"] [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"] {
-    flex: 0 0 auto !important;
-}
-/* spacer — make its wrapper element grow */
-.azime-spacer {
-    min-height: 24px;
-}
-[data-testid="stSidebar"] [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"]:has(.azime-spacer) {
-    flex: 1 1 0 !important;
-    display: flex !important;
-}
-
-.azime-side-foot {
-    padding: 10px 14px 14px;
-    border-top: 1px solid var(--border);
-    margin-top: auto;
-}
-
-/* settings expander → gear icon only (hide label text) */
-.azime-side-foot [data-testid="stExpander"] {
-    border: none !important;
-    background: transparent !important;
-}
-.azime-side-foot [data-testid="stExpander"] > details > summary {
-    list-style: none !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    padding: 6px 8px !important;
-    color: var(--meta) !important;
     cursor: pointer;
-    font-size: 0 !important;
-    line-height: 0 !important;
+    transition: background var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease);
 }
-.azime-side-foot [data-testid="stExpander"] > details > summary::marker,
-.azime-side-foot [data-testid="stExpander"] > details > summary::-webkit-details-marker {
-    content: "" !important;
-    display: none !important;
-}
-.azime-side-foot [data-testid="stExpander"] > details > summary > div,
-.azime-side-foot [data-testid="stExpander"] > details > summary > span,
-.azime-side-foot [data-testid="stExpander"] > details > summary p {
-    font-size: 0 !important;
-    line-height: 0 !important;
-    color: transparent !important;
-    visibility: hidden !important;
-}
-.azime-side-foot [data-testid="stExpander"] > details > summary::before {
-    content: "";
-    width: 18px; height: 18px;
-    display: inline-block;
-    background-color: currentColor;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 1v6m0 10v6M4.22 4.22l4.24 4.24m7.08 7.08 4.24 4.24M1 12h6m10 0h6M4.22 19.78l4.24-4.24m7.08-7.08 4.24-4.24'/%3E%3C/svg%3E");
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: contain;
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 1v6m0 10v6M4.22 4.22l4.24 4.24m7.08 7.08 4.24 4.24M1 12h6m10 0h6M4.22 19.78l4.24-4.24m7.08-7.08 4.24-4.24'/%3E%3C/svg%3E");
-    visibility: visible;
-}
-.azime-side-foot [data-testid="stExpander"] > details[open] > summary {
-    margin-bottom: 8px;
-}
-.azime-side-foot [data-testid="stExpander"] > details > summary:hover {
-    color: var(--fg) !important;
-}
-.azime-side-foot [data-testid="stExpander"] > details > summary:hover::before {
-    background-color: var(--fg);
-}
-
-/* keep old foot-row rule (no longer emitted) harmless */
-.azime-foot-row {
-    display:flex; align-items:center; gap:9px;
-    padding: 7px 8px; border-radius: var(--radius-sm);
-    font-size: var(--text-sm); color: var(--muted);
-    transition: background var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease);
-}
-.azime-foot-row .pill {
-    margin-left:auto; font-size:10px; color: var(--meta);
-    border:1px solid var(--border); padding:1px 6px; border-radius: var(--radius-pill);
+.azime-header-bar .azime-header-btn:hover {
+    background: var(--surface-3);
+    color: var(--fg-2);
+    border-color: var(--border-soft);
 }
 
 /* ============================================================
@@ -493,12 +355,40 @@ li.azime-session {
 .stDataFrame table { background: var(--surface-2) !important; }
 .stDataFrame thead th {
     background: var(--surface) !important; color: var(--meta) !important;
-    font-weight: 500 !important; font-size: 10.5px !important; text-transform: uppercase !important;
+    font-weight: 500 !important; font-size: 11px !important; text-transform: uppercase !important;
     letter-spacing: 0.05em !important;
     border-bottom: 1px solid var(--border) !important;
 }
-.stDataFrame tbody td { border-bottom: 1px solid var(--border) !important; color: var(--fg-2) !important; font-size: 12px !important; }
+.stDataFrame tbody td { border-bottom: 1px solid var(--border) !important; color: var(--fg-2) !important; font-size: 12.5px !important; }
 .stDataFrame tbody tr:hover td { background: var(--surface) !important; color: var(--fg) !important; }
+
+/* Preview do PC final — maior e mais largo que o restante do chat.
+   Quebra o max-width 768px só para a tabela, dando respiro lateral em telas
+   largas. Em telas estreitas mantém a largura do container. */
+.azime-df-pc {
+    margin-top: 14px;
+}
+@media (min-width: 1100px) {
+    .azime-df-pc {
+        margin-left: -72px;
+        margin-right: -72px;
+    }
+    .azime-df-pc .stDataFrame { height: 520px !important; }
+}
+.azime-df-pc .stDataFrame {
+    height: 520px;
+}
+.azime-df-pc .azime-df-head .count { color: var(--fg); font-weight: 500; }
+
+/* HITL — wrapper da tabela de 19 campos com scroll horizontal se exceder */
+.azime-hitl-fields {
+    margin: 4px 0 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    background: var(--surface-2);
+}
+.azime-hitl-fields .stDataFrame { border: none !important; margin-top: 0 !important; }
 
 /* ============================================================
    Process / steps
@@ -596,10 +486,16 @@ li.azime-session {
     border: 1px solid var(--border-soft) !important;
     background: var(--surface-warm) !important; color: var(--fg-2) !important;
     transition: background var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease) !important;
-    width: 100% !important;
 }
 .stButton > button:hover { background: var(--surface-3) !important; border-color: var(--border-focus) !important; color: var(--fg) !important; }
-.stButton > button p { margin: 0 !important; font-size: var(--text-sm) !important; color: inherit !important; }
+.stButton > button svg {
+    flex-shrink: 0;
+    min-width: 14px;
+    max-width: 18px;
+}
+.stButton > button {
+    white-space: nowrap;
+}
 .stButton > button[kind="primary"] {
     background: var(--accent) !important; color: var(--accent-on) !important;
     border-color: var(--accent) !important;
@@ -637,11 +533,15 @@ li.azime-session {
    Progress bar
    ============================================================ */
 
+.azime-progress-wrap {
+    margin: 16px 0 8px;
+}
 .stProgress > div > div > div > div {
     background-color: var(--fg) !important; border-radius: 100px !important;
     transition: width 300ms var(--ease) !important;
 }
-.stProgress > div > div > div { background-color: var(--border) !important; border-radius: 100px !important; height: 2px !important; }
+.stProgress > div > div > div { background-color: var(--border) !important; border-radius: 100px !important; height: 6px !important; }
+.stProgress { margin-top: 12px !important; }
 
 /* ============================================================
    Divider
@@ -657,42 +557,108 @@ li.azime-session {
 [data-testid="stForm"] > div { padding: 0 !important; }
 
 /* ============================================================
-   File uploader
+   File uploader — drag & drop card
    ============================================================ */
 
-[data-testid="stFileUploader"] { padding-top: 0.5rem; }
-[data-testid="stFileUploader"] section {
-    background-color: var(--surface-2) !important;
+.azime-upload-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 2.2rem 2rem;
+    background: var(--surface-2);
+    border: 1.5px dashed var(--border-soft);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--transition), background-color var(--transition);
+    margin-top: 14px;
+}
+.azime-upload-zone:hover {
+    border-color: var(--border-focus);
+    background-color: var(--surface-3);
+}
+.azime-upload-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--surface-3);
+    display: grid; place-items: center;
+    color: var(--fg-2);
+}
+.azime-upload-icon svg { opacity: 0.85; }
+.azime-upload-title {
+    font-size: var(--text-base);
+    color: var(--fg-2);
+    font-weight: 500;
+}
+.azime-upload-title strong { color: var(--fg); font-weight: 600; }
+.azime-upload-sub {
+    font-size: var(--text-xs);
+    color: var(--meta);
+    font-family: var(--font-mono);
+    letter-spacing: 0.03em;
+}
+
+[data-testid="stFileUploader"] { padding-top: 0 !important; }
+[data-testid="stFileUploader"] [data-testid="stFileUploaderDropzone"] {
+    background: var(--surface-2) !important;
     border: 1.5px dashed var(--border-soft) !important;
     border-radius: var(--radius-lg) !important;
-    padding: 1.5rem 1.5rem !important;
+    padding: 1.8rem 1.5rem !important;
     transition: border-color var(--transition), background-color var(--transition) !important;
 }
-[data-testid="stFileUploader"] section:hover {
-    border-color: var(--border-focus) !important; background-color: var(--surface-3) !important;
+[data-testid="stFileUploader"] [data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--border-focus) !important;
+    background-color: var(--surface-3) !important;
 }
+[data-testid="stFileUploader"] section { padding: 0 !important; background: transparent !important; border: none !important; }
 [data-testid="stFileUploader"] section [data-testid="stMarkupContainer"] p {
     color: var(--muted) !important; font-size: var(--text-sm) !important;
 }
-[data-testid="stFileUploader"] [data-testid="stFileUploaderDropzone"] {
-    background: transparent !important; border: none !important;
-}
 [data-testid="stFileUploader"] [data-testid="stFileUploaderDropzoneInstructions"] {
     color: var(--meta) !important;
+    font-size: var(--text-xs) !important;
 }
-[data-testid="stFileUploader"] button {
-    background-color: var(--surface-3) !important;
-    border: 1px solid var(--border-soft) !important;
+[data-testid="stFileUploader"] [data-testid="stBaseButton-primary"] {
+    background-color: var(--fg) !important;
+    color: var(--accent-on) !important;
+    border: 1px solid var(--fg) !important;
     border-radius: var(--radius-sm) !important;
-    color: var(--fg-2) !important;
-    font-size: var(--text-sm) !important; padding: 7px 11px !important;
+    font-size: var(--text-sm) !important; font-weight: 500 !important;
+    padding: 8px 16px !important;
     width: auto !important; min-width: unset !important;
     transition: all var(--transition) !important;
 }
-[data-testid="stFileUploader"] button:hover {
-    background-color: var(--surface-3) !important; border-color: var(--border-focus) !important;
-    color: var(--fg) !important;
+[data-testid="stFileUploader"] [data-testid="stBaseButton-primary"]:hover {
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
 }
+[data-testid="stFileUploader"] [data-testid="stFileUploaderFile"] {
+    background: var(--surface-2) !important;
+    border: 1px solid var(--border-soft) !important;
+    border-radius: var(--radius-md) !important;
+    padding: 10px 14px !important;
+}
+
+/* ============================================================
+   Popover (Settings — provider de IA)
+   ============================================================ */
+
+[data-testid="stPopover"] {
+    background: var(--surface) !important; border: 1px solid var(--border-soft) !important;
+    border-radius: var(--radius-lg) !important; box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+    min-width: 280px !important;
+}
+[data-testid="stPopover"] > button {
+    background: transparent !important; border: 1px solid var(--border-soft) !important; color: var(--muted) !important;
+    font-size: var(--text-sm) !important; padding: 7px 12px !important;
+    border-radius: var(--radius-sm) !important;
+    min-width: unset !important; width: 100% !important;
+    transition: color var(--transition), border-color var(--transition), background var(--transition) !important;
+}
+[data-testid="stPopover"] > button:hover { color: var(--fg) !important; border-color: var(--border-focus) !important; background: var(--surface-3) !important; }
+[data-testid="stPopover"] [role="radiogroup"] [role="radio"] { gap: 8px; }
+[data-testid="stPopover"] [role="radio"] [data-baseweb="radio"] > div { background: var(--surface-3) !important; }
+[data-testid="stPopover"] [role="radio"][aria-checked="true"] [data-baseweb="radio"] > div { background: var(--fg) !important; }
+[data-testid="stPopover"] [role="radio"] span { color: var(--fg-2) !important; font-size: var(--text-sm) !important; }
 
 /* ============================================================
    JSON
@@ -711,23 +677,6 @@ li.azime-session {
     font-size: 12.5px;
     line-height: 1.55;
 }
-
-/* ============================================================
-   Popover (Settings)
-   ============================================================ */
-
-[data-testid="stPopover"] {
-    background: var(--surface) !important; border: 1px solid var(--border-soft) !important;
-    border-radius: var(--radius-lg) !important; box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
-    min-width: 280px !important;
-}
-[data-testid="stPopover"] > button {
-    background: transparent !important; border: none !important; color: var(--muted) !important;
-    font-size: 1.1rem !important; padding: 0.25rem 0.5rem !important;
-    min-width: unset !important; width: auto !important;
-    transition: color var(--transition) !important;
-}
-[data-testid="stPopover"] > button:hover { color: var(--fg) !important; background: none !important; }
 
 /* ============================================================
    Streaming cursor + dots
@@ -789,6 +738,10 @@ li.azime-session {
     [data-testid="stSidebar"] { display: none !important; }
     .main .block-container { padding: 0 16px !important; }
     .azime-welcome h1 { font-size: 30px !important; }
+}
+@media (max-width: 640px) {
+    [data-testid="stSidebar"] { display: none !important; }
+    .main .block-container { padding: 0 10px !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {

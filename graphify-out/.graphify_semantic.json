@@ -1,0 +1,1101 @@
+{
+  "nodes": [
+    {
+      "id": "product_md_azimeai",
+      "label": "AzimeAI",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "product_md_invoice_to_pedido_de_compra",
+      "label": "Invoice → Pedido de Compra conversion",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "product_md_chat_first_principle",
+      "label": "Chat-first interaction principle",
+      "file_type": "rationale",
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "All interaction is a message. The user never navigates. Upload, processing, corrections and download happen within a message flow."
+    },
+    {
+      "id": "product_md_monochromatic_principle",
+      "label": "Monochromatic design principle",
+      "file_type": "rationale",
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Black (#0a0a0a) and white (#fafafa). Neutral grays as intermediate scale. Zero decoration."
+    },
+    {
+      "id": "product_md_hitl_pattern",
+      "label": "Human-in-the-loop (HITL) pattern",
+      "file_type": "rationale",
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "LLM with HITL for uncertainties. Feedback (progress, errors, HITL) are messages in chat, not modals."
+    },
+    {
+      "id": "product_md_operadores_compras",
+      "label": "Purchase operators (ALAN, LUIS, etc.)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_chat_pc_system",
+      "label": "Invoice → Pedido de Compra (HITL) System",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_app_py",
+      "label": "app.py (Streamlit UI)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_schema_py",
+      "label": "schema.py (LinhaPedidoCompra Pydantic + PedidoEstado TypedDict)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_prompts_py",
+      "label": "prompts.py (System/user prompts with controlled vocabulary)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_llm_py",
+      "label": "llm.py (ChatNVIDIA + retry on ValidationError)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_cleaner_py",
+      "label": "cleaner.py (pandas: header detection, ffill, footer discard)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_graph_py",
+      "label": "graph.py (StateGraph: processar → HITL interrupt → loop)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_mappings_py",
+      "label": "mappings.py (CN→PT catalogs, Plating→Banho, supplier profiles)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_controlled_vocabulary",
+      "label": "Controlled vocabulary (categoria, banho, tipo_pedra, marca, zirconia)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_agent_flow",
+      "label": "Agent flow: upload → clean → LLM structured output → HITL → download",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_validation_retry_mechanism",
+      "label": "ValidationError retry mechanism (1x auto-retry, then HITL)",
+      "file_type": "rationale",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Outputs outside controlled vocabulary trigger ValidationError → automatic retry (1x) re-sending error to LLM; if persists, becomes duvida_pendente=True for HITL."
+    },
+    {
+      "id": "readme_md_supplier_detection_by_content",
+      "label": "Supplier/type detection by content (not filename)",
+      "file_type": "rationale",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "The ALAN/LUIS prefix in filename is the operator (person), NOT the supplier. Detection is done by spreadsheet content (keyword/ideogram), never by operator name."
+    },
+    {
+      "id": "readme_md_future_sqlite_checkpointer",
+      "label": "Future: SQLite checkpointer (AsyncSqliteSaver)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_future_streaming",
+      "label": "Future: Streaming events (stream_mode=custom)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_md_future_auto_learning",
+      "label": "Future: Auto-learning from HITL corrections",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_master_md_azimeai_design_system",
+      "label": "AzimeAI Design System Master",
+      "file_type": "document",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_master_md_color_tokens",
+      "label": "Design tokens (color, typography, spacing, motion)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_master_md_restricted_monochrome",
+      "label": "Restricted Monochrome color strategy",
+      "file_type": "rationale",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Dark-first. Black + white + neutral grays. Zero decorative color. Semantic colors only for state feedback (success/error/warning)."
+    },
+    {
+      "id": "design_master_md_claude_ai_reference",
+      "label": "Claude.ai (Anthropic) as visual reference",
+      "file_type": "rationale",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Dark, minimal, chat-first design. Reference for typography, spacing, component behavior."
+    },
+    {
+      "id": "design_master_md_welcome_page_arch",
+      "label": "Welcome page architecture (app_stage = init)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_master_md_chat_page_arch",
+      "label": "Chat page architecture (app_stage = config/ready/processing/done)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_master_md_hitl_card_component",
+      "label": "HITL doubt card component (inline message)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_master_md_wcag_21_aa",
+      "label": "WCAG 2.1 AA accessibility compliance",
+      "file_type": "rationale",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Contrast >= 4.5:1 on all text. Full keyboard navigation. Associated labels. No hover-only interactions."
+    },
+    {
+      "id": "design_web_prototype_design_handoff_md",
+      "label": "Design Handoff document (implementation contract)",
+      "file_type": "document",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\DESIGN-HANDOFF.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html",
+      "label": "AzimeAI Chat interface (HTML prototype)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html_startworkflow",
+      "label": "startWorkflow function",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": "line 855",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html_runsteps",
+      "label": "runSteps function",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": "line 917",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html_resolvehitl",
+      "label": "resolveHitl function",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": "line 964",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html_showresult",
+      "label": "showResult function",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": "line 981",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html_resetsession",
+      "label": "resetSession function",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": "line 1015",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html_state_machine",
+      "label": "Demo state machine (empty → uploaded → processing → hitl → result)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": "line 692",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html_chat_ui_components",
+      "label": "Chat UI components (sidebar, messages, composer, HITL card)",
+      "file_type": "concept",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_index_html_css_design_tokens",
+      "label": "CSS custom properties (design tokens implementation)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": "line 16",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_txt_pandas",
+      "label": "pandas (>=2.2)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": "line 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_txt_streamlit",
+      "label": "streamlit (>=1.31)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": "line 3",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_txt_langgraph",
+      "label": "langgraph (>=0.2)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": "line 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_txt_langchain",
+      "label": "langchain (>=0.3)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": "line 5",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_txt_langchain_nvidia_ai_endpoints",
+      "label": "langchain-nvidia-ai-endpoints (>=0.3)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": "line 6",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_txt_pydantic",
+      "label": "pydantic (>=2.7)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": "line 9",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_txt_langchain_openai",
+      "label": "langchain-openai (>=0.2)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": "line 7",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_txt_langchain_google_genai",
+      "label": "langchain-google-genai (>=2.0)",
+      "file_type": "code",
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": "line 8",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "azimeai_1__png",
+      "label": "AzimeAI application screenshot or mockup",
+      "file_type": "image",
+      "source_file": "C:\\Projetos\\chat_pc\\azimeai (1).png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_web_prototype_mr9q5395_azimeai__1__png",
+      "label": "AzimeAI chat interface design screenshot",
+      "file_type": "image",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\mr9q5395-azimeai-_1_.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "design_logo_svg",
+      "label": "AzimeAI SVG logo (geometric monogram: rounded square + triangle A)",
+      "file_type": "image",
+      "source_file": "C:\\Projetos\\chat_pc\\design\\logo.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "product_md_azimeai",
+      "target": "product_md_invoice_to_pedido_de_compra",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "product_md_azimeai",
+      "target": "product_md_chat_first_principle",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "product_md_azimeai",
+      "target": "product_md_monochromatic_principle",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "product_md_azimeai",
+      "target": "product_md_hitl_pattern",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\PRODUCT.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_chat_pc_system",
+      "target": "product_md_azimeai",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_chat_pc_system",
+      "target": "product_md_invoice_to_pedido_de_compra",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_chat_pc_system",
+      "target": "product_md_hitl_pattern",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_chat_pc_system",
+      "target": "readme_md_controlled_vocabulary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_chat_pc_system",
+      "target": "readme_md_agent_flow",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_graph_py",
+      "target": "readme_md_llm_py",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_graph_py",
+      "target": "readme_md_schema_py",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_graph_py",
+      "target": "readme_md_cleaner_py",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_graph_py",
+      "target": "readme_md_mappings_py",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_llm_py",
+      "target": "readme_md_schema_py",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_llm_py",
+      "target": "readme_md_prompts_py",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_cleaner_py",
+      "target": "requirements_txt_pandas",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_llm_py",
+      "target": "requirements_txt_langchain_nvidia_ai_endpoints",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_schema_py",
+      "target": "requirements_txt_pydantic",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_app_py",
+      "target": "requirements_txt_streamlit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_graph_py",
+      "target": "requirements_txt_langgraph",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_llm_py",
+      "target": "requirements_txt_langchain",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_controlled_vocabulary",
+      "target": "readme_md_validation_retry_mechanism",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_app_py",
+      "target": "readme_md_graph_py",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_azimeai_design_system",
+      "target": "product_md_azimeai",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_azimeai_design_system",
+      "target": "product_md_monochromatic_principle",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_restricted_monochrome",
+      "target": "design_master_md_color_tokens",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_claude_ai_reference",
+      "target": "design_master_md_azimeai_design_system",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_welcome_page_arch",
+      "target": "product_md_chat_first_principle",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_chat_page_arch",
+      "target": "design_master_md_hitl_card_component",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_hitl_card_component",
+      "target": "product_md_hitl_pattern",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_azimeai_design_system",
+      "target": "design_master_md_wcag_21_aa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_master_md_azimeai_design_system",
+      "target": "design_logo_svg",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_design_handoff_md",
+      "target": "design_master_md_azimeai_design_system",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\DESIGN-HANDOFF.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_design_handoff_md",
+      "target": "design_web_prototype_index_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\DESIGN-HANDOFF.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_design_handoff_md",
+      "target": "design_web_prototype_mr9q5395_azimeai__1__png",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\DESIGN-HANDOFF.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html",
+      "target": "design_master_md_azimeai_design_system",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html_css_design_tokens",
+      "target": "design_master_md_color_tokens",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html_chat_ui_components",
+      "target": "design_master_md_chat_page_arch",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html",
+      "target": "product_md_azimeai",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html_startworkflow",
+      "target": "design_web_prototype_index_html_state_machine",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html_startworkflow",
+      "target": "design_web_prototype_index_html_runsteps",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html_resolvehitl",
+      "target": "design_web_prototype_index_html_showresult",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html_showresult",
+      "target": "design_web_prototype_index_html_resetsession",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_index_html_state_machine",
+      "target": "readme_md_agent_flow",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_llm_py",
+      "target": "requirements_txt_langchain_openai",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_md_llm_py",
+      "target": "requirements_txt_langchain_google_genai",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Projetos\\chat_pc\\requirements.txt",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "azimeai_1__png",
+      "target": "product_md_azimeai",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Projetos\\chat_pc\\azimeai (1).png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_web_prototype_mr9q5395_azimeai__1__png",
+      "target": "design_web_prototype_index_html",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\Web-Prototype\\mr9q5395-azimeai-_1_.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "design_logo_svg",
+      "target": "product_md_azimeai",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\logo.svg",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "agent_pipeline_modules",
+      "label": "Agent pipeline modules (graph orchestrates cleaner, llm, mappings, schema)",
+      "nodes": [
+        "readme_md_graph_py",
+        "readme_md_llm_py",
+        "readme_md_cleaner_py",
+        "readme_md_mappings_py",
+        "readme_md_schema_py",
+        "readme_md_prompts_py"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Projetos\\chat_pc\\README.md"
+    },
+    {
+      "id": "hitl_ui_concept_chain",
+      "label": "HITL concept chain: product principle → design system component → prototype implementation",
+      "nodes": [
+        "product_md_hitl_pattern",
+        "design_master_md_hitl_card_component",
+        "design_web_prototype_index_html_state_machine"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md"
+    },
+    {
+      "id": "chat_first_principle_implementation",
+      "label": "Chat-first principle implementation across product brief, design system, and prototype",
+      "nodes": [
+        "product_md_chat_first_principle",
+        "design_master_md_chat_page_arch",
+        "design_master_md_welcome_page_arch",
+        "design_web_prototype_index_html_chat_ui_components"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Projetos\\chat_pc\\design\\MASTER.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
