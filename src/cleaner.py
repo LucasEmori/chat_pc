@@ -177,6 +177,14 @@ def detectar_fator_cny(df_raw: pd.DataFrame, header_idx: int,
     """
     if header_idx is None or header_idx < 1:
         return None
+
+    # Guard: header com '序号' → invoice USD (Alan/Luis). Não procura fator.
+    # Só invoices CNY (Renato/CEREJA) têm header 'No. | Code | Description'.
+    hdr_vals = [str(v or "").strip().lower()
+                for v in df_raw.iloc[header_idx].tolist()]
+    if any("序号" in v for v in hdr_vals):
+        return None
+
     inicio = max(0, header_idx - max_busca)
 
     # Localiza coluna marcada 'amount/quantidade' em linhas acima do header
