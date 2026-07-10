@@ -6,3 +6,4 @@ INFO:     127.0.0.1:58095 - "GET /api/health HTTP/1.1" 200 OK
 2026-07-08 11:22:13,976 [INFO] api.sessions: Sessão criada: 65cbca114614407983ffe5fb1793e092 (thread 927c7429-2b95-4d69-83a8-4d79feccaf4f)
 INFO:     127.0.0.1:58096 - "POST /api/session HTTP/1.1" 200 OK
 INFO:     127.0.0.1:58097 - "POST /api/configure?session_id=65cbca114614407983ffe5fb1793e092 HTTP/1.1" 200 OK
+2026-07-08 15:26:25,411 [INFO] api.sessions: Sessão expirada removida: 65cbca114614407983ffe5fb1793e092

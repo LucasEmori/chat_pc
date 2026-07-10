@@ -439,13 +439,24 @@ def _e_footer(linha: pd.Series) -> bool:
     )
     if "total" in vals_txt or "discount" in vals_txt or "certificate" in vals_txt:
         return True
-    # Sem qty ou qty==0 -> não é item (captura resíduos pós-ffill vazios)
+    # Item válido se tem categoria (ou plating/stone_color) E qty>0.
+    # Caso "new development": itens podem não ter ref nem unit_weight definidos
+    # ainda, mas são pedidos reais (categoria + qty plausível).
+    cat = str(linha.get("categoria_cn", "")).strip().lower()
+    plating = str(linha.get("plating", "")).strip().lower()
+    stone = str(linha.get("stone_color", "")).strip().lower()
+    tem_categoria = cat not in ("", "nan", "none", "total") and "total" not in cat
+    tem_pedra = plating not in ("", "nan", "none") or stone not in ("", "nan", "none")
     qty = linha.get("qty")
+    qty_positiva = False
+    try:
+        qty_positiva = float(qty) > 0
+    except (TypeError, ValueError):
+        pass
+    if (tem_categoria or tem_pedra) and qty_positiva:
+        return False
+    # Sem qty ou qty==0 -> não é item (captura resíduos pós-ffill vazios)
     if pd.isna(qty) or qty in (0, "0", "0.0"):
-        return True
-    # Sem peso unitário -> provável linha de total/summary (qty alta sem peso)
-    uw = linha.get("unit_weight")
-    if pd.isna(uw) or uw in (0, "0", "0.0"):
         return True
     # Sem ref válido -> não é item
     ref = str(linha.get("ref", "")).strip().lower()
@@ -554,9 +565,29 @@ def limpar_planilha(caminho: str, nome_arquivo: str = "",
     # 5. Forward-fill colunas chave (variante herda Ref/Categoria).
     #    Importante: 'ref' é o código real (Item No.); variantes seguintes
     #    costumam ter a célula vazia e devem herdar o código da linha anterior.
-    for col in ("ref", "categoria_cn", "categoria_en"):
+    #    Guard: ref só herda se a CATEGORIA ORIGINAL também estiver vazia
+    #    (mesmo item, variante de pedra/banho). Se categoria muda é produto
+    #    DISTINTO sem código — não herdamos ref (caso "new development" sem
+    #    código atribuído). Para decidir capturamos o estado original da
+    #    categoria ANTES do ffill dela.
+    if "ref" in df.columns:
+        cat_orig_nan = (df["categoria_cn"].isna() if "categoria_cn" in df.columns
+                        else pd.Series([True] * len(df)))
+    for col in ("categoria_cn", "categoria_en"):
         if col in df.columns:
             df[col] = df[col].ffill()
+    if "ref" in df.columns:
+        # ffill ref: apenas onde categoria original era NaN (variante mesma)
+        ffill_mask = df["ref"].isna() & cat_orig_nan
+        if ffill_mask.any():
+            last_ref = None
+            for i in range(len(df)):
+                cur_ref = df.at[df.index[i], "ref"]
+                is_na = (isinstance(cur_ref, float) and pd.isna(cur_ref)) or cur_ref is None or (isinstance(cur_ref, str) and not cur_ref.strip())
+                if not is_na:
+                    last_ref = cur_ref
+                if ffill_mask.iloc[i] and last_ref is not None:
+                    df.at[df.index[i], "ref"] = last_ref
 
     # 6. Coerção numérica
     for col in ("qty", "unit_weight", "total_wt", "stone_price",
@@ -582,8 +613,20 @@ def limpar_planilha(caminho: str, nome_arquivo: str = "",
     df = df.dropna(how="all").reset_index(drop=True)
 
     # 9. Anotar coluna origem ref legível (mantém 'ref' como string)
-    df["ref"] = df["ref"].astype("object").astype(str).str.strip()
-    df = df[df["ref"].str.len() > 0].reset_index(drop=True)
+    #    NaN/None viram string vazia (itens "new development" sem código).
+    df["ref"] = df["ref"].astype("object").fillna("").astype(str).str.strip()
+    df["ref"] = df["ref"].replace({"nan": "", "None": "", "NaN": ""})
+    # Manter linha se tem ref válido OU é item "new development" sem código
+    # (categoria preenchida + qty>0). Invoices novas podem ter itens pendentes
+    # de atribuição de código pelo fornecedor.
+    ref_valido = df["ref"].str.len() > 0
+    item_sem_codigo = pd.Series(False, index=df.index)
+    if "categoria_cn" in df.columns and "qty" in df.columns:
+        cat_ok = ~df["categoria_cn"].astype(str).str.strip().isin(
+            ["", "nan", "None", "NaN"])
+        qty_ok = df["qty"].fillna(0).astype(float) > 0
+        item_sem_codigo = cat_ok & qty_ok & ~ref_valido
+    df = df[ref_valido | item_sem_codigo].reset_index(drop=True)
 
     return df, perfil
 
