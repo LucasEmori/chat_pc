@@ -45,14 +45,22 @@ CATEGORIA_EN_PT: dict[str, str] = {
     "ring": "ANEL",
     "rings": "ANEL",
     "necklace": "COLAR",
+    "necklaces": "COLAR",
     "bracelet": "BRACELETE",
+    "bracelets": "BRACELETE",
     "bangle": "BRACELETE",
+    "bangles": "BRACELETE",
     "chain": "CORRENTE",
+    "chains": "CORRENTE",
     "pendant": "PINGENTE",
+    "pendants": "PINGENTE",
     "brooch": "BROCHE",
+    "brooches": "BROCHE",
     "pin": "BROCHE",
+    "pins": "BROCHE",
     "ring set": "CONJUNTO",
     "set": "CONJUNTO",
+    "sets": "CONJUNTO",
     "ring/pendant": "PINGENTE",
 }
 
@@ -75,6 +83,7 @@ BANHO_PLATING_PT: dict[str, str] = {
     "black plated": "PRETO",
     "champagne gold": "OURO",
     "yellow gold": "OURO",
+    "brazilian gold": "OURO",
     "silver": "RÓDIO",
 }
 

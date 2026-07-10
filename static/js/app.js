@@ -77,8 +77,8 @@ const api = {
     }
     return r.json();
   },
-  async configure(marca, cod, fatorCny) {
-    const body = { marca, cod_fornecedor: cod };
+  async configure(marca, cod, fatorCny, moeda) {
+    const body = { marca, cod_fornecedor: cod, moeda };
     if (fatorCny != null && fatorCny > 0) body.fator_cny = fatorCny;
     const r = await fetch(`/api/configure?session_id=${state.sessionId}`, {
       method: "POST", headers: { "Content-Type": "application/json" },
@@ -296,16 +296,22 @@ function pushHistory(msg) {
   appendMsgNode(msg);
 }
 
-// ── Form: configurar marca + fornecedor (stage config) ────────
+// ── Form: configurar marca + fornecedor + moeda (stage config) ──
 function renderConfigForm() {
-  const isCny = state.moeda === "CNY";
   const fatorSugerido = state.fatorCnySugerido != null ? String(state.fatorCnySugerido) : "6.72";
   const card = el("div", "azime-hitl");
   card.id = "hitl-config";
   card.innerHTML = `
     <div class="htitle"><span class="q">⚙</span> Configurar invoice</div>
-    <div class="hsub">Preciso da marca e código de fornecedor antes de processar.</div>
+    <div class="hsub">Informe moeda, marca e código do fornecedor antes de processar.</div>
     <div class="azime-hitl-grid">
+      <div class="field">
+        <label for="cfg-moeda">Moeda da invoice</label>
+        <select class="azime-select" id="cfg-moeda">
+          <option value="USD">USD (Alan/Luis)</option>
+          <option value="CNY">CNY (Renato/CEREJA)</option>
+        </select>
+      </div>
       <div class="field">
         <label for="cfg-marca">Marca</label>
         <select class="azime-select" id="cfg-marca">
@@ -317,40 +323,49 @@ function renderConfigForm() {
         <input class="azime-input" id="cfg-cod" placeholder="ex.: 012432" />
       </div>
     </div>
-    ${isCny ? `
-    <div class="field" style="margin-top:10px">
+    <div class="field" id="cfg-fator-group" style="margin-top:10px;display:none">
       <label for="cfg-fator-cny">Cotação do dólar (CNY → USD)</label>
       <input class="azime-input" id="cfg-fator-cny" type="number" step="0.01" min="0.01"
              value="${esc(fatorSugerido)}" placeholder="ex.: 6.72" />
-      <div class="hsub" style="margin-top:2px">Confirmar/sobrescrever o fator sugerido. Aplica-se a labor, silver, preço unitário e total.</div>
-    </div>` : ""}
+      <div class="hsub" style="margin-top:2px">Taxa de conversão CNY para USD. Obrigatório para invoices CNY.</div>
+    </div>
     <div class="azime-row grow-3-2">
       <button class="azime-btn azime-btn-primary azime-btn-stretch" id="cfg-continue">${ICO.arrow} Continuar</button>
       <button class="azime-btn azime-btn-secondary azime-btn-stretch" id="cfg-skip">${ICO.skip} Pular, usar padrão</button>
     </div>`;
   appendToChat(card);
+
+  // Toggle campo fator conforme moeda selecionada
+  const moedaSel = card.querySelector("#cfg-moeda");
+  const fatorGroup = card.querySelector("#cfg-fator-group");
+  moedaSel.addEventListener("change", () => {
+    fatorGroup.style.display = moedaSel.value === "CNY" ? "block" : "none";
+  });
+
   card.querySelector("#cfg-continue").addEventListener("click", async () => {
+    const moeda = moedaSel.value;
     const marca = card.querySelector("#cfg-marca").value;
     const cod = card.querySelector("#cfg-cod").value.trim();
     const fatorInput = card.querySelector("#cfg-fator-cny");
-    const fatorCny = isCny && fatorInput
-      ? parseFloat((fatorInput.value || "").replace(",", "."))
-      : null;
-    if (isCny && (!fatorCny || fatorCny <= 0)) {
-      pushHistory({ role: "assistant",
-        content: "Cotação do dólar inválida. Digite um número maior que zero (ex.: 6.72).",
-        type: "text" });
-      return;
+    let fatorCny = null;
+    if (moeda === "CNY") {
+      fatorCny = parseFloat((fatorInput.value || "").replace(",", "."));
+      if (!fatorCny || fatorCny <= 0) {
+        pushHistory({ role: "assistant",
+          content: "Cotação do dólar inválida. Digite um número maior que zero (ex.: 6.72).",
+          type: "text" });
+        return;
+      }
     }
     card.remove();
-    await api.configure(marca, cod, fatorCny);
+    await api.configure(marca, cod, fatorCny, moeda);
     renderReadyActions(marca, cod);
   });
   card.querySelector("#cfg-skip").addEventListener("click", async () => {
     card.remove();
-    // Skip aceita fator sugerido (fallback 6.72) para não travar o fluxo CNY.
-    const fatorSkip = isCny ? (state.fatorCnySugerido || 6.72) : null;
-    await api.configure("AL", "", fatorSkip);
+    const moeda = moedaSel.value;
+    const fatorSkip = moeda === "CNY" ? parseFloat(fatorSugerido) : null;
+    await api.configure("AL", "", fatorSkip, moeda);
     renderReadyActions("AL", "012432");
   });
 }
@@ -732,19 +747,11 @@ async function handleUpload(file) {
       type: "text",
     });
     pushHistory({ role: "assistant", content: res.preview, type: "preview", total: res.n_itens });
-    if (state.moeda === "CNY") {
-      pushHistory({
-        role: "assistant",
-        content: `Detectei a invoice em <strong>CNY</strong> (fator sugerido: <code class="mono">${state.fatorCnySugerido}</code>). Preciso da <strong>cotação do dólar (CNY→USD)</strong> para converter os preços.`,
-        type: "text",
-      });
-    } else {
-      pushHistory({
-        role: "assistant",
-        content: "Preciso confirmar <strong>marca</strong> e <strong>código do fornecedor</strong> antes de gerar o pedido.",
-        type: "text",
-      });
-    }
+    pushHistory({
+      role: "assistant",
+      content: "Preciso confirmar <strong>moeda</strong>, <strong>marca</strong> e <strong>código do fornecedor</strong> antes de gerar o pedido.",
+      type: "text",
+    });
 
     renderConfigForm();
   } catch (e) {

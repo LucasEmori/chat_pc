@@ -64,7 +64,8 @@ class SessionCreated(BaseModel):
 class ConfigureIn(BaseModel):
     marca: str = "AL"
     cod_fornecedor: str = ""
-    # Cotação CNY→USD. Obrigatório quando perfil['moeda']=='CNY'; sem efeito em USD.
+    moeda: str = "USD"  # "USD" ou "CNY" — operador informa obrigatoriamente
+    # Cotação CNY→USD. Obrigatório quando moeda='CNY'; sem efeito em USD.
     fator_cny: Optional[float] = None
 
 
@@ -267,24 +268,22 @@ def configure(payload: ConfigureIn, session_id: str) -> dict:
     with sessions.lock_for(session_id):
         st.marca = payload.marca
         st.cod_fornecedor = (payload.cod_fornecedor or "").strip()
-        # CNY: user confirma/sobrescreve fator sugerido pelo cleaner.
-        # Se divergente, re-aplica conversão no df_limpo já carregado.
-        if payload.fator_cny is not None and payload.fator_cny > 0:
-            if st.perfil is None:
-                st.perfil = {}
-            fator_antigo = st.perfil.get("fator_cny_sugerido") or st.perfil.get("fator_cny")
+        moeda_antiga = (st.perfil or {}).get("moeda", "USD")
+        if st.perfil is None:
+            st.perfil = {}
+        st.perfil["moeda"] = payload.moeda
+        # Se usuário forneceu fator_cny (obrigatório quando CNY), aplicar conversão.
+        if payload.moeda == "CNY" and payload.fator_cny is not None and payload.fator_cny > 0:
+            from src.cleaner import _aplicar_conversao_cny
             st.perfil["fator_cny"] = payload.fator_cny
-            st.perfil["moeda"] = "CNY"
-            if (payload.fator_cny != fator_antigo
-                    and st.df_limpo is not None
-                    and fator_antigo is not None):
-                # recalcular: precisa re-dividir amount_cny pelo novo fator.
-                # desfaz colunas USD derivadas e re-aplica conversão.
-                from src.cleaner import _aplicar_conversao_cny
-                # restaura amount_cny/silver_price_cny (preservados pelo cleaner).
+            if st.df_limpo is not None:
                 st.df_limpo = _aplicar_conversao_cny(st.df_limpo, payload.fator_cny)
-                logger.info("Fator CNY re-aplicado: %s -> %s",
-                            fator_antigo, payload.fator_cny)
+                logger.info("Conversão CNY aplicada. Fator: %s, Moeda antiga: %s",
+                            payload.fator_cny, moeda_antiga)
+        elif payload.moeda == "USD" and moeda_antiga != "USD":
+            # Usuario mudou de CNY para USD: re-carregar planilha para limpar
+            # conversão anterior (operação via upload novamente).
+            logger.info("Moeda alterada para USD. Será necessário re-envio.")
         st.stage = "ready"
         st.touch()
     return {

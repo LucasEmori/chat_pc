@@ -99,6 +99,20 @@ _NORMALIZACAO_COLUNAS = {
     "labor usd/g": "labor_usd_g_fornec",
     "stone weight": "stone_weight",
     "pi": "pi_ref",
+    # ── Invoice Grant/IZABEL (PT-fed, EN header puro) ──
+    # Header: "Modelo novitah | [dup] | Pic. | Item No. | Type | Stone |
+    #         Plating | Size | Quantity | novitah | encomenda | Price | Amount"
+    # Colunas ignoradas (operador internas): Modelo novitah, Pic., novitah,
+    # encomenda, Unnamed: 13 (preço da pedra by pcs — descartado, não usado
+    # no output do PC). Amount = Price × Quantity (total) — também descartado.
+    # 'quantity' já mapeado p/ qty (linha 90, conflito CNY sem colisão real
+    # pois chave estável mesma; mapeamento é idempotente neste caso).
+    "type": "categoria_en",
+    "stone": "stone_color",
+    # 'price' aqui é preço por peça FOB em USD (Grant já calculado pelo
+    # fornecedor). Map p/ 'price_unit_fob' distinto de 'price_usd_g' para
+    # não colidir com preço por grama do formato ALAN/LUIS.
+    "price": "price_unit_fob",
 }
 
 
@@ -111,12 +125,15 @@ def _detectar_linha_header(df_raw: pd.DataFrame, max_linhas: int = 30) -> Option
 
     Marcadores e pesos:
       - '序号' (header CN, USD invoices Alan/Luis)  → peso 4 (decisivo)
-      - 'ref.'/'ref'/'item no.'                     → peso 2
+      - 'ref.'/'ref'/'item no.'                     → peso 2 (item no.=3 p/ Grant)
       - '产品编号' (código do produto, CN)          → peso 2
       - 'no.'/'code'/'description' (header CNY)     → peso 1 cada
       - 'stone color' / 'plating' / 'weight'         → peso 0.5 cada
-        (headers auxiliares; somados discriminam
-         linhas de header vs linhas de dados vazias)
+        (headers auxiliares; somados discriminam)
+      - 'type'/'stone'/'quantity' (header Grant/IZABEL) → peso 2 cada
+        (header EN puro, "Item No." já peso 3; type+plating+quantity+stone
+        discriminam vs linha de dados com item no. isolado)
+      - 'size'/'price'/'amount' (header Grant)       → peso 1 cada
 
     Critério de definição: score ≥ 2. Empate → última linha (header
     geralmente aparece DEPOIS de linhas de metadata/title).
@@ -141,14 +158,21 @@ def _detectar_linha_header(df_raw: pd.DataFrame, max_linhas: int = 30) -> Option
             if "序号" in v:
                 score += 4
             elif v in ("ref.", "ref") or v.startswith("item no."):
-                score += 2
+                # Grant/IZABEL usa "Item No." como Código FORNECEDOR
+                # (preço 3 p/ vencer linhas de dados com item no. citado).
+                # ALAN/LUIS escala p/ 2 (não-vencedor isolado).
+                score += 3 if v == "item no." else 2
             elif v == "产品编号":
                 score += 2
             elif v in ("no.", "code", "description"):
                 score += 1
+            elif v in ("type", "stone", "quantity"):
+                score += 2
+            elif v in ("size", "price", "amount"):
+                score += 1
             elif v == "stone color" or v.startswith("plating") or v == "weight":
                 score += 0.5
-        if score > melhor_score:
+        if score >= melhor_score and score > 0:
             melhor_score = score
             melhor_idx = i
     if melhor_score < 2.0:
@@ -423,6 +447,8 @@ def _detectar_coluna_tamanho(df_raw: pd.DataFrame, linha_header: int) -> Optiona
 def _normalizar_nome_coluna(nome: object) -> str:
     if nome is None:
         return ""
+    if isinstance(nome, float) and pd.isna(nome):
+        return ""
     s = str(nome).strip().lower()
     # Normalizar whitespace interno (newlines, tabs, espaços múltiplos)
     s = re.sub(r"\s+", " ", s)
@@ -458,8 +484,16 @@ def _e_footer(linha: pd.Series) -> bool:
     # Sem qty ou qty==0 -> não é item (captura resíduos pós-ffill vazios)
     if pd.isna(qty) or qty in (0, "0", "0.0"):
         return True
-    # Sem ref válido -> não é item
+    # Footer row: qty>0 mas ref/price/stone/plating todos vazios
+    # -> linha de total/summary (Grant) ou resíduo pós-ffill (ALAN).
+    # Marcador decisivo: price_unit_fob vazio E stone_color vazio E
+    # plating vazio = não há dados de produto, só qty/amount total.
     ref = str(linha.get("ref", "")).strip().lower()
+    price = linha.get("price_unit_fob")
+    price_vazio = price is None or (isinstance(price, float) and pd.isna(price))
+    if price_vazio and not tem_pedra:
+        return True
+    # Sem ref válido -> não é item
     if ref in ("", "nan", "none"):
         return True
     return False
@@ -537,11 +571,26 @@ def limpar_planilha(caminho: str, nome_arquivo: str = "",
             cabecalho[col_tamanho] = "size"
 
     df = df_raw.iloc[linha_header + 1:].copy()
-    df.columns = [_normalizar_nome_coluna(c) for c in cabecalho]
+    cols_norm = [_normalizar_nome_coluna(c) for c in cabecalho]
+    # Descartar colunas sem nome / duplicadas ANTES do assign para evitar
+    # DataFrame com colunas repetidas (pd.to_numeric quebra em dup).
+    # Mantemos apenas primeira ocorrência de cada chave estável.
+    visto_pre: set[str] = set()
+    idx_keep: list[int] = []
+    cols_keep_pre: list[str] = []
+    for ci, cn in enumerate(cols_norm):
+        if cn in ("", "nan", "none") or cn in visto_pre:
+            continue
+        visto_pre.add(cn)
+        idx_keep.append(ci)
+        cols_keep_pre.append(cn)
+    df = df.iloc[:, idx_keep].copy()
+    df.columns = cols_keep_pre
     df = df.reset_index(drop=True)
 
     # Descartar colunas sem nome / duplicadas / NaN-string mantendo
-    # apenas as chaves estáveis reconhecidas.
+    # apenas as chaves estáveis reconhecidas (já feito acima; mantém
+    # por compatibilidade).
     visto: set[str] = set()
     cols_keep: list[str] = []
     for c in df.columns:
@@ -555,7 +604,8 @@ def limpar_planilha(caminho: str, nome_arquivo: str = "",
     colunas_padrao = ("categoria_cn", "categoria_en", "ref", "num_seq",
                       "stone_color", "stone_color_cn", "plating", "size",
                       "qty", "unit_weight", "total_wt", "stone_price",
-                      "silver_price", "labor_price", "price_usd_g", "total_usd")
+                      "silver_price", "labor_price", "price_usd_g", "total_usd",
+                      "price_unit_fob")
     colunas_cny = ("amount_cny", "silver_price_cny", "labor_price_cny",
                    "discount_cny", "valor_unit_cny")
     for col in colunas_padrao + colunas_cny:
@@ -570,15 +620,22 @@ def limpar_planilha(caminho: str, nome_arquivo: str = "",
     #    DISTINTO sem código — não herdamos ref (caso "new development" sem
     #    código atribuído). Para decidir capturamos o estado original da
     #    categoria ANTES do ffill dela.
+    #    Adicionalmente, footer rows (totais/discount) não devem herdar via
+    #    ffill — marcamos-as pré-ffill com base em qty vazia/zero (linhas de
+    #    footer clássicas ALAN/LUIS). Footer com qty alto (total Grant) é
+    #    tratado depois em _e_footer (ref vazia + price vazio).
     if "ref" in df.columns:
         cat_orig_nan = (df["categoria_cn"].isna() if "categoria_cn" in df.columns
                         else pd.Series([True] * len(df)))
+    qty_orig = df["qty"] if "qty" in df.columns else pd.Series([None] * len(df))
+    nao_qty_vazia = ~(qty_orig.isna() | qty_orig.isin([0, "0", "0.0"]))
     for col in ("categoria_cn", "categoria_en"):
         if col in df.columns:
+            df[col] = df[col].where(nao_qty_vazia)
             df[col] = df[col].ffill()
     if "ref" in df.columns:
         # ffill ref: apenas onde categoria original era NaN (variante mesma)
-        ffill_mask = df["ref"].isna() & cat_orig_nan
+        ffill_mask = df["ref"].isna() & cat_orig_nan & nao_qty_vazia
         if ffill_mask.any():
             last_ref = None
             for i in range(len(df)):
@@ -592,10 +649,12 @@ def limpar_planilha(caminho: str, nome_arquivo: str = "",
     # 6. Coerção numérica
     for col in ("qty", "unit_weight", "total_wt", "stone_price",
                 "silver_price", "labor_price", "price_usd_g", "total_usd",
+                "price_unit_fob",
                 "amount_cny", "silver_price_cny", "labor_price_cny",
                 "discount_cny", "valor_unit_cny"):
         if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors="coerce")
+            serie = df[col].squeeze()
+            df[col] = pd.to_numeric(serie, errors="coerce")
 
     # 6.5 Conversão CNY → USD (only quando moeda=CNY).
     #     Path USD (Alan/Luis) não passa aqui — flag previne.
@@ -687,6 +746,9 @@ def linha_para_dict(linha: pd.Series) -> dict:
         "labor_price": _safe_num(linha.get("labor_price")) or 0.0,
         "price_usd_g": _safe_num(linha.get("price_usd_g")),
         "total_usd": _safe_num(linha.get("total_usd")),
+        # Grant/IZABEL: preço por peça FOB já calculado pelo fornecedor.
+        # LLM copia direto p/ unit_price_fob (sem labor+silver*peso).
+        "price_unit_fob": _safe_num(linha.get("price_unit_fob")),
     }
 
 
@@ -714,11 +776,16 @@ def linhas_para_dataframe_pc(linhas_processadas: list[dict]) -> pd.DataFrame:
         escolhida pelo operador (AL/GR/NV).
       - colunas 'pedra' e 'zirconia' deixadas VAZIAS — o usuário
         define esses valores manualmente após receber o PC.
+      - Marca NV: remove colunas Labor Price, Silver Price e Dia
+        (modelo ERP da NV não inclui breakdown de preço).
     """
     linhas_sanitizadas: list[dict] = []
+    marca_sessao = ""
     for linha in linhas_processadas:
         nova = dict(linha)
         marca = (nova.get("marca") or "").upper().strip()
+        if marca:
+            marca_sessao = marca
         nova["banho"] = resolver_banho(str(nova.get("banho", "")), marca)
         nova["categoria"] = resolver_categoria(str(nova.get("categoria", "")), marca)
         # Pedra e Zirconia: vazias no PC final — usuário define.
@@ -733,4 +800,12 @@ def linhas_para_dataframe_pc(linhas_processadas: list[dict]) -> pd.DataFrame:
     df = df[COLUNAS_SAIDA_PC]
     # Renomear snake_case -> colunas PT do ERP
     df = df.rename(columns=COLUNAS_PT)
+    # Marca NV: remover colunas Labor Price, Silver Price e Dia
+    if marca_sessao == "NV":
+        cols_drop = [
+            COLUNAS_PT["labor_price"],
+            COLUNAS_PT["silver_price"],
+            COLUNAS_PT["dia"],
+        ]
+        df = df.drop(columns=[c for c in cols_drop if c in df.columns])
     return df

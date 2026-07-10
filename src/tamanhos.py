@@ -283,7 +283,11 @@ def aplicar_expansao_anel(linha: dict) -> list[dict]:
     saida: list[dict] = []
     for p in proposta:
         row = dict(base)
-        row["tamanho"] = p["tamanho"]
+        # Prefixo "'" força Excel a tratar como texto, preservando zero à
+        # esquerda do tamanho do anel (ex.: '05, '06). Sem isso, Excel
+        # converte "05" para 5 numérico.
+        tam = str(p["tamanho"])
+        row["tamanho"] = f"'{tam}" if not tam.startswith("'") else tam
         row["quantidade"] = p["quantidade"]
         row["_ja_expandido"] = True
         saida.append(row)
